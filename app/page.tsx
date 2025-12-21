@@ -69,15 +69,15 @@ export default function Home() {
       </section>
 
       {/* Mission & Sabbath Countdown Section */}
-      <section className="py-20 md:py-28">
-        <div className="container max-w-6xl mx-auto px-8 md:px-12">
-          <div className="grid gap-16 lg:gap-24 lg:grid-cols-2 items-center">
+      <section className="py-12 md:py-16">
+        <div className="max-w-5xl mx-auto px-12 md:px-20 lg:px-24">
+          <div className="grid gap-8 lg:gap-16 lg:grid-cols-2 items-center">
             {/* Mission Text */}
-            <div className="max-w-lg">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+            <div className="max-w-md">
+              <h2 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-4">
                 Our Mission
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+              <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                 The Peculiar Pioneers are dedicated to proclaiming the Three Angels&apos; Messages of Revelation 14 and preparing people for the soon return of Jesus Christ. Through our ministry, we aim to uphold the biblical truths preserved by the Seventh-day Adventist movement, with a special emphasis on the sanctuary message, the Sabbath, righteousness by faith, and the Spirit of Prophecy.
               </p>
               <Button href="/about" variant="secondary">
