@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { Video, getYouTubeThumbnail, isNewVideo, formatDate } from '@/lib/videos'
 import CategoryBadge from './CategoryBadge'
-import DurationBadge from './DurationBadge'
 import NewBadge from './NewBadge'
 import SeriesProgress from './SeriesProgress'
 
@@ -41,7 +40,6 @@ export default function VideoCard({ video }: VideoCardProps) {
 
         {/* Badges */}
         {isNew && <NewBadge />}
-        <DurationBadge duration={video.duration} />
       </div>
 
       {/* Content */}
