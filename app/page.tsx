@@ -70,10 +70,10 @@ export default function Home() {
 
       {/* Mission & Sabbath Countdown Section */}
       <section className="py-20 md:py-28">
-        <div className="container">
+        <div className="container max-w-6xl mx-auto px-8 md:px-12">
           <div className="grid gap-16 lg:gap-24 lg:grid-cols-2 items-center">
             {/* Mission Text */}
-            <div>
+            <div className="max-w-lg">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
                 Our Mission
               </h2>
