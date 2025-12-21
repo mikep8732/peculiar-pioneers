@@ -78,17 +78,17 @@ export default function SabbathCountdown() {
 
   if (!mounted) {
     return (
-      <div className="bg-white dark:bg-dark-100 border border-gray-200 dark:border-dark-200 rounded-2xl p-10">
-        <h3 className="text-2xl font-semibold text-gray-900 dark:text-white text-center mb-8">
+      <div className="bg-white dark:bg-dark-100 border border-gray-200 dark:border-dark-200 rounded-2xl p-6 md:p-8">
+        <h3 className="text-xl font-semibold text-gray-900 dark:text-white text-center mb-5">
           Time Until Sabbath
         </h3>
-        <div className="flex justify-center gap-4">
+        <div className="flex justify-center gap-3">
           {['Days', 'Hours', 'Minutes', 'Seconds'].map((label) => (
             <div key={label} className="text-center">
-              <div className="bg-gray-900 dark:bg-dark-300 text-white text-4xl md:text-5xl font-bold rounded-xl w-20 h-20 md:w-24 md:h-24 flex items-center justify-center">
+              <div className="bg-gray-900 dark:bg-dark-300 text-white text-3xl md:text-4xl font-bold rounded-xl w-16 h-14 md:w-20 md:h-16 flex items-center justify-center">
                 --
               </div>
-              <span className="text-sm text-gray-500 dark:text-gray-400 mt-3 block">{label}</span>
+              <span className="text-xs text-gray-500 dark:text-gray-400 mt-2 block">{label}</span>
             </div>
           ))}
         </div>
@@ -104,17 +104,17 @@ export default function SabbathCountdown() {
   ]
 
   return (
-    <div className="bg-white dark:bg-dark-100 border border-gray-200 dark:border-dark-200 rounded-2xl p-10">
-      <h3 className="text-2xl font-semibold text-gray-900 dark:text-white text-center mb-8">
+    <div className="bg-white dark:bg-dark-100 border border-gray-200 dark:border-dark-200 rounded-2xl p-6 md:p-8">
+      <h3 className="text-xl font-semibold text-gray-900 dark:text-white text-center mb-5">
         Time Until Sabbath
       </h3>
-      <div className="flex justify-center gap-4">
+      <div className="flex justify-center gap-3">
         {timeUnits.map(({ value, label }) => (
           <div key={label} className="text-center">
-            <div className="bg-gray-900 dark:bg-dark-300 text-white text-4xl md:text-5xl font-bold rounded-xl w-20 h-20 md:w-24 md:h-24 flex items-center justify-center">
+            <div className="bg-gray-900 dark:bg-dark-300 text-white text-3xl md:text-4xl font-bold rounded-xl w-16 h-14 md:w-20 md:h-16 flex items-center justify-center">
               {value.toString().padStart(2, '0')}
             </div>
-            <span className="text-sm text-gray-500 dark:text-gray-400 mt-3 block">{label}</span>
+            <span className="text-xs text-gray-500 dark:text-gray-400 mt-2 block">{label}</span>
           </div>
         ))}
       </div>
