@@ -1,0 +1,50 @@
+{
+  "intro": "We hold fast to the fundamental truths of Scripture as understood by Seventh-day Adventists, with particular emphasis on the present truth for this generation.",
+  "beliefs": [
+    {
+      "title": "The Word of God",
+      "summary": "The Holy Scriptures, Old and New Testaments, are the written Word of God. The Bible is the only rule of faith and practice, sufficient for all doctrine and instruction.",
+      "verses": ["2 Timothy 3:16-17", "2 Peter 1:20-21", "Isaiah 8:20"]
+    },
+    {
+      "title": "The Godhead",
+      "summary": "There is one God: Father, Son, and Holy Spirit, a unity of three co-eternal Persons. God is immortal, all-powerful, all-knowing, above all, and ever present.",
+      "verses": ["Deuteronomy 6:4", "Matthew 28:19", "1 John 5:7"]
+    },
+    {
+      "title": "The Sabbath",
+      "summary": "The seventh day of the week is the Sabbath of the Lord, a memorial of Creation and a sign of sanctification. From sunset Friday to sunset Saturday, we cease from secular work and worship our Creator.",
+      "verses": ["Genesis 2:1-3", "Exodus 20:8-11", "Isaiah 58:13-14", "Mark 2:27-28"]
+    },
+    {
+      "title": "The Second Coming",
+      "summary": "The return of Christ is the blessed hope of the church. His coming will be literal, personal, visible, and worldwide. The signs of the times indicate His coming is near.",
+      "verses": ["John 14:1-3", "Acts 1:9-11", "Revelation 1:7", "Matthew 24:30-31"]
+    },
+    {
+      "title": "The Sanctuary",
+      "summary": "The heavenly sanctuary is the center of Christ's high priestly ministry. In 1844, Christ entered the Most Holy Place to begin the investigative judgment, a work of cleansing foretold in Daniel 8:14.",
+      "verses": ["Hebrews 8:1-5", "Hebrews 9:23-24", "Daniel 8:14", "Revelation 14:6-7"]
+    },
+    {
+      "title": "The Three Angels' Messages",
+      "summary": "These messages of Revelation 14:6-12 call the world to worship the Creator, proclaim the fall of Babylon, and warn against the mark of the beast. This is present truth for our time.",
+      "verses": ["Revelation 14:6-12", "Revelation 18:1-4"]
+    },
+    {
+      "title": "The State of the Dead",
+      "summary": "The dead rest in the grave awaiting the resurrection. There is no consciousness in death. At Christ's return, the righteous dead will be raised to immortality.",
+      "verses": ["Ecclesiastes 9:5-6", "Psalm 146:4", "John 11:11-14", "1 Thessalonians 4:16-17"]
+    },
+    {
+      "title": "Health Reform",
+      "summary": "Our bodies are temples of the Holy Spirit. We honor God by caring for our health through proper diet, exercise, and abstinence from harmful substances.",
+      "verses": ["1 Corinthians 6:19-20", "1 Corinthians 10:31", "Romans 12:1-2"]
+    },
+    {
+      "title": "The Spirit of Prophecy",
+      "summary": "The writings of Ellen G. White are a continuing source of truth, comfort, and guidance for the remnant church, a lesser light pointing to the greater light of Scripture.",
+      "verses": ["Revelation 12:17", "Revelation 19:10", "Amos 3:7", "Joel 2:28-29"]
+    }
+  ]
+}
