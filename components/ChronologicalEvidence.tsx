@@ -1044,7 +1044,7 @@ export default function ChronologicalEvidence() {
                         </span>
                       </div>
                       <div className="flex gap-1">
-                        {[...new Set(yearData.events.map(e => e.type))].map(type => (
+                        {Array.from(new Set(yearData.events.map(e => e.type))).map(type => (
                           <span
                             key={type}
                             className="w-3 h-3 rounded-full"
