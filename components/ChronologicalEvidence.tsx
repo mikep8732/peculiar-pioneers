@@ -885,8 +885,7 @@ export default function ChronologicalEvidence() {
                     : 'bg-gray-100 dark:bg-dark-200 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-dark-100'
                 }`}
               >
-                <span className="hidden sm:inline">{era.name}</span>
-                <span className="sm:hidden">{era.years}</span>
+                {era.years}
               </button>
             ))}
           </div>
