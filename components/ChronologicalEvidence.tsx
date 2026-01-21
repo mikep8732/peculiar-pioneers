@@ -879,10 +879,10 @@ export default function ChronologicalEvidence() {
                   setActiveEra(era.id);
                   setExpandedYears(new Set());
                 }}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
+                className={`px-5 py-2.5 rounded-lg text-base font-medium transition-all cursor-pointer ${
                   activeEra === era.id
-                    ? 'bg-gold text-white'
-                    : 'bg-gray-100 dark:bg-dark-200 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-dark-100'
+                    ? 'bg-gold text-white shadow-md'
+                    : 'bg-white dark:bg-dark-200 text-gray-700 dark:text-gray-300 border border-gray-300 dark:border-gray-600 shadow-sm hover:bg-gray-50 dark:hover:bg-dark-100 hover:shadow-md'
                 }`}
               >
                 {era.years}
