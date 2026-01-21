@@ -803,38 +803,11 @@ export default function ChronologicalEvidence() {
   const totalEvents = filteredEvents?.reduce((sum, y) => sum + y.events.length, 0) || 0;
 
   return (
-    <div className="min-h-screen bg-[#0A0F1C] text-[#E8E4DC]" style={{ fontFamily: "'Source Serif 4', Georgia, serif" }}>
-      {/* Import fonts */}
+    <div className="min-h-screen bg-gray-50 dark:bg-dark text-gray-900 dark:text-gray-100" style={{ fontFamily: "Georgia, serif" }}>
+      {/* Custom styles */}
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap');
-
-        .font-sans { font-family: 'Inter', system-ui, sans-serif; }
-
         .timeline-line {
           background: linear-gradient(180deg, #C9A227 0%, #8B6914 50%, #C9A227 100%);
-        }
-
-        .quote-box {
-          background: linear-gradient(135deg, rgba(201, 162, 39, 0.08) 0%, rgba(139, 105, 20, 0.04) 100%);
-          border-left: 3px solid #C9A227;
-        }
-
-        .era-card {
-          background: linear-gradient(145deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%);
-          backdrop-filter: blur(12px);
-        }
-
-        .event-card {
-          background: rgba(30, 41, 59, 0.4);
-          backdrop-filter: blur(8px);
-        }
-
-        .filter-btn {
-          transition: all 0.2s ease;
-        }
-
-        .filter-btn:hover {
-          transform: translateY(-1px);
         }
 
         .year-marker {
@@ -850,37 +823,24 @@ export default function ChronologicalEvidence() {
           from { opacity: 0; transform: translateY(10px); }
           to { opacity: 1; transform: translateY(0); }
         }
-
-        .scrollbar-thin::-webkit-scrollbar {
-          width: 6px;
-        }
-
-        .scrollbar-thin::-webkit-scrollbar-track {
-          background: rgba(30, 41, 59, 0.3);
-        }
-
-        .scrollbar-thin::-webkit-scrollbar-thumb {
-          background: rgba(201, 162, 39, 0.5);
-          border-radius: 3px;
-        }
       `}</style>
 
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-[#0A0F1C]/95 backdrop-blur-lg border-b border-[#C9A227]/20">
+      <header className="sticky top-0 z-40 bg-white/95 dark:bg-dark/95 backdrop-blur-lg border-b border-gray-200 dark:border-gray-800">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
-              <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-[#C9A227]">
+              <h1 className="text-2xl md:text-3xl font-bold tracking-tight text-gold">
                 Chronological Evidence
               </h1>
-              <p className="text-sm text-[#A89F91] mt-1 font-sans">
+              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
                 Natural Disasters, Crime & World Events - 1844-2026
               </p>
             </div>
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setShowIntro(!showIntro)}
-                className="px-4 py-2 text-sm font-sans font-medium text-[#C9A227] border border-[#C9A227]/40 rounded-lg hover:bg-[#C9A227]/10 transition-colors"
+                className="px-4 py-2 text-sm font-medium text-gold border border-gold/40 rounded-lg hover:bg-gold/10 transition-colors"
               >
                 {showIntro ? 'Hide' : 'Show'} Introduction
               </button>
@@ -893,15 +853,15 @@ export default function ChronologicalEvidence() {
         {/* Introduction Panel */}
         {showIntro && (
           <section className="mb-10 animate-fade-in">
-            <div className="quote-box rounded-xl p-6 md:p-8">
-              <p className="text-lg md:text-xl leading-relaxed mb-6 text-[#E8E4DC]/90">
+            <div className="bg-gold/5 dark:bg-gold/10 border-l-4 border-gold rounded-r-xl p-6 md:p-8">
+              <p className="text-lg md:text-xl leading-relaxed mb-6 text-gray-700 dark:text-gray-200">
                 This document provides a comprehensive chronological record of natural disasters, crimes, wars, and significant world events from 1844 to 2026. The year 1844 marks the beginning of the investigative judgment in the heavenly sanctuary and the start of the last phase of earth&apos;s history.
               </p>
-              <blockquote className="border-l-2 border-[#C9A227]/60 pl-5 my-6">
-                <p className="italic text-[#E8E4DC]/80 text-base md:text-lg leading-relaxed">
+              <blockquote className="border-l-2 border-gold/60 pl-5 my-6">
+                <p className="italic text-gray-600 dark:text-gray-300 text-base md:text-lg leading-relaxed">
                   &quot;The calamities by land and sea, the unsettled state of society, the alarms of war, are portentous. They forecast approaching events of the greatest magnitude. The agencies of evil are combining their forces and consolidating. They are strengthening for the last great crisis. Great changes are soon to take place in our world, and the final movements will be rapid ones.&quot;
                 </p>
-                <cite className="block mt-3 text-sm text-[#C9A227] font-sans not-italic">
+                <cite className="block mt-3 text-sm text-gold not-italic">
                   - Ellen G. White, Testimonies for the Church 9:11 (1909)
                 </cite>
               </blockquote>
@@ -919,10 +879,10 @@ export default function ChronologicalEvidence() {
                   setActiveEra(era.id);
                   setExpandedYears(new Set());
                 }}
-                className={`px-4 py-2 rounded-lg text-sm font-sans font-medium transition-all ${
+                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all ${
                   activeEra === era.id
-                    ? 'bg-[#C9A227] text-[#0A0F1C]'
-                    : 'bg-[#1E293B]/60 text-[#E8E4DC]/80 hover:bg-[#1E293B] hover:text-[#E8E4DC]'
+                    ? 'bg-gold text-white'
+                    : 'bg-gray-100 dark:bg-dark-200 text-gray-600 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-dark-100'
                 }`}
               >
                 <span className="hidden sm:inline">{era.name}</span>
@@ -934,30 +894,30 @@ export default function ChronologicalEvidence() {
 
         {/* Current Era Header */}
         {currentEra && (
-          <section className="era-card rounded-2xl p-6 md:p-8 mb-8 border border-[#C9A227]/20">
+          <section className="bg-white dark:bg-dark-200 rounded-2xl p-6 md:p-8 mb-8 border border-gray-200 dark:border-gray-700">
             <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4 mb-6">
               <div>
-                <span className="text-[#C9A227] font-sans text-sm font-medium tracking-wider uppercase">
+                <span className="text-gold text-sm font-medium tracking-wider uppercase">
                   Era {currentEra.id} of 6
                 </span>
-                <h2 className="text-3xl md:text-4xl font-bold mt-1 text-[#E8E4DC]">
+                <h2 className="text-3xl md:text-4xl font-bold mt-1 text-gray-900 dark:text-white">
                   {currentEra.name}
                 </h2>
-                <p className="text-xl text-[#C9A227] mt-1">{currentEra.years}</p>
+                <p className="text-xl text-gold mt-1">{currentEra.years}</p>
               </div>
-              <div className="text-right font-sans">
-                <div className="text-3xl font-bold text-[#C9A227]">{totalEvents}</div>
-                <div className="text-sm text-[#A89F91]">events shown</div>
+              <div className="text-right">
+                <div className="text-3xl font-bold text-gold">{totalEvents}</div>
+                <div className="text-sm text-gray-500 dark:text-gray-400">events shown</div>
               </div>
             </div>
-            <p className="text-[#E8E4DC]/80 text-lg leading-relaxed mb-6">
+            <p className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6">
               {currentEra.description}
             </p>
-            <blockquote className="quote-box rounded-lg p-4 md:p-5">
-              <p className="italic text-[#E8E4DC]/80 leading-relaxed">
+            <blockquote className="bg-gold/5 dark:bg-gold/10 border-l-4 border-gold rounded-r-lg p-4 md:p-5">
+              <p className="italic text-gray-600 dark:text-gray-300 leading-relaxed">
                 &quot;{currentEra.introQuote.text}&quot;
               </p>
-              <cite className="block mt-2 text-sm text-[#C9A227] font-sans not-italic">
+              <cite className="block mt-2 text-sm text-gold not-italic">
                 - {currentEra.introQuote.source}
               </cite>
             </blockquote>
@@ -967,17 +927,17 @@ export default function ChronologicalEvidence() {
         {/* Filters */}
         <section className="mb-8">
           <div className="flex flex-wrap items-center gap-2 mb-3">
-            <span className="text-sm text-[#A89F91] font-sans">Filter by type:</span>
+            <span className="text-sm text-gray-500 dark:text-gray-400 font-sans">Filter by type:</span>
             <button
               onClick={selectAllFilters}
-              className="text-xs font-sans text-[#C9A227] hover:underline"
+              className="text-xs font-sans text-gold hover:underline"
             >
               Select All
             </button>
-            <span className="text-[#A89F91]">|</span>
+            <span className="text-gray-400 dark:text-gray-500">|</span>
             <button
               onClick={clearAllFilters}
-              className="text-xs font-sans text-[#C9A227] hover:underline"
+              className="text-xs font-sans text-gold hover:underline"
             >
               Clear All
             </button>
@@ -989,8 +949,8 @@ export default function ChronologicalEvidence() {
                 onClick={() => toggleFilter(key)}
                 className={`filter-btn flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-sans font-medium border transition-all ${
                   activeFilters.has(key)
-                    ? 'border-transparent text-[#0A0F1C]'
-                    : 'border-[#374151] text-[#A89F91] hover:border-[#525E6F]'
+                    ? 'border-transparent text-gray-900'
+                    : 'border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 hover:border-gray-400 dark:hover:border-gray-500'
                 }`}
                 style={{
                   backgroundColor: activeFilters.has(key) ? color : 'transparent',
@@ -1006,7 +966,7 @@ export default function ChronologicalEvidence() {
         {/* Timeline */}
         <section ref={timelineRef} className="relative">
           {/* Timeline line */}
-          <div className="absolute left-4 md:left-8 top-0 bottom-0 w-0.5 timeline-line opacity-60" />
+          <div className="absolute left-4 md:left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gold via-gold/60 to-gold opacity-60" />
 
           {/* Events */}
           <div className="space-y-6">
@@ -1023,22 +983,22 @@ export default function ChronologicalEvidence() {
                   {/* Year marker */}
                   <button
                     onClick={() => toggleYear(yearData.year)}
-                    className="absolute left-0 md:left-4 w-8 h-8 year-marker rounded-full flex items-center justify-center text-[#0A0F1C] font-sans font-bold text-xs hover:scale-110 transition-transform"
+                    className="absolute left-0 md:left-4 w-8 h-8 bg-gold rounded-full flex items-center justify-center text-gray-900 font-sans font-bold text-xs hover:scale-110 transition-transform"
                   >
                     {isExpanded ? '−' : '+'}
                   </button>
 
                   {/* Year content */}
-                  <div className="event-card rounded-xl border border-[#374151]/50 overflow-hidden">
+                  <div className="bg-white dark:bg-dark-200 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
                     <button
                       onClick={() => toggleYear(yearData.year)}
-                      className="w-full flex items-center justify-between p-4 hover:bg-[#1E293B]/30 transition-colors text-left"
+                      className="w-full flex items-center justify-between p-4 hover:bg-gray-50 dark:hover:bg-dark-100 transition-colors text-left"
                     >
                       <div className="flex items-center gap-4">
-                        <span className="text-2xl md:text-3xl font-bold text-[#C9A227]">
+                        <span className="text-2xl md:text-3xl font-bold text-gold">
                           {yearData.year}
                         </span>
-                        <span className="text-sm text-[#A89F91] font-sans">
+                        <span className="text-sm text-gray-500 dark:text-gray-400 font-sans">
                           {yearData.events.length} event{yearData.events.length !== 1 ? 's' : ''}
                           {hasQuote && ' - includes prophecy quote'}
                         </span>
@@ -1060,7 +1020,7 @@ export default function ChronologicalEvidence() {
                         {yearData.events.map((event, eIdx) => (
                           <div
                             key={eIdx}
-                            className="flex gap-3 items-start p-3 rounded-lg bg-[#0A0F1C]/50"
+                            className="flex gap-3 items-start p-3 rounded-lg bg-gray-50 dark:bg-dark/50"
                           >
                             <span
                               className="flex-shrink-0 w-6 h-6 rounded flex items-center justify-center text-sm"
@@ -1068,18 +1028,18 @@ export default function ChronologicalEvidence() {
                             >
                               {eventTypes[event.type]?.icon}
                             </span>
-                            <p className="text-[#E8E4DC]/90 text-sm leading-relaxed">
+                            <p className="text-gray-700 dark:text-gray-200 text-sm leading-relaxed">
                               {event.text}
                             </p>
                           </div>
                         ))}
 
                         {hasQuote && (
-                          <blockquote className="quote-box rounded-lg p-4 mt-4">
-                            <p className="italic text-[#E8E4DC]/80 text-sm leading-relaxed">
+                          <blockquote className="bg-gold/10 border-l-4 border-gold rounded-r-lg p-4 mt-4">
+                            <p className="italic text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                               &quot;{yearData.quote?.text}&quot;
                             </p>
-                            <cite className="block mt-2 text-xs text-[#C9A227] font-sans not-italic">
+                            <cite className="block mt-2 text-xs text-gold font-sans not-italic">
                               - {yearData.quote?.source}
                             </cite>
                           </blockquote>
@@ -1094,7 +1054,7 @@ export default function ChronologicalEvidence() {
 
           {filteredEvents?.length === 0 && (
             <div className="text-center py-16">
-              <p className="text-[#A89F91] font-sans">
+              <p className="text-gray-500 dark:text-gray-400 font-sans">
                 No events match your current filters. Try selecting more event types.
               </p>
             </div>
@@ -1103,11 +1063,11 @@ export default function ChronologicalEvidence() {
 
         {/* Conclusion */}
         <section className="mt-16 mb-8">
-          <div className="era-card rounded-2xl p-6 md:p-8 border border-[#C9A227]/20">
-            <h3 className="text-2xl md:text-3xl font-bold text-[#C9A227] mb-6">
+          <div className="bg-white dark:bg-dark-200 rounded-2xl p-6 md:p-8 border border-gold/20">
+            <h3 className="text-2xl md:text-3xl font-bold text-gold mb-6">
               The Evidence Speaks
             </h3>
-            <div className="space-y-4 text-[#E8E4DC]/80 leading-relaxed">
+            <div className="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
               <p>
                 This chronological record, spanning 182 years from 1844 to 2026, demonstrates an unmistakable pattern of increasing disaster, violence, and moral decline. What was once unusual has become commonplace.
               </p>
@@ -1115,18 +1075,18 @@ export default function ChronologicalEvidence() {
                 The Spirit of Prophecy writings predicted precisely what we now see fulfilling before our eyes. Ellen White wrote these warnings more than a century ago, yet they describe today&apos;s headlines with remarkable precision. This is not coincidence. It is the fingerprint of divine inspiration.
               </p>
             </div>
-            <blockquote className="quote-box rounded-lg p-5 mt-6">
-              <p className="italic text-[#E8E4DC]/80 text-lg leading-relaxed">
+            <blockquote className="bg-gold/10 border-l-4 border-gold rounded-r-lg p-5 mt-6">
+              <p className="italic text-gray-600 dark:text-gray-300 text-lg leading-relaxed">
                 &quot;Great changes are soon to take place in our world, and the final movements will be rapid ones.&quot;
               </p>
-              <cite className="block mt-3 text-sm text-[#C9A227] font-sans not-italic">
+              <cite className="block mt-3 text-sm text-gold font-sans not-italic">
                 - Ellen G. White, Testimonies for the Church 9:11 (1909)
               </cite>
             </blockquote>
-            <p className="text-center text-2xl text-[#C9A227] mt-8 font-bold italic">
+            <p className="text-center text-2xl text-gold mt-8 font-bold italic">
               Even so, come, Lord Jesus!
             </p>
-            <p className="text-center text-sm text-[#A89F91] font-sans mt-2">
+            <p className="text-center text-sm text-gray-500 dark:text-gray-400 font-sans mt-2">
               Revelation 22:20
             </p>
           </div>
@@ -1134,12 +1094,12 @@ export default function ChronologicalEvidence() {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-[#C9A227]/20 py-8">
+      <footer className="border-t border-gray-200 dark:border-gray-700 py-8">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <p className="text-sm text-[#A89F91] font-sans">
+          <p className="text-sm text-gray-500 dark:text-gray-400 font-sans">
             Supplementary Document to the Prophetic Position Paper - January 2026
           </p>
-          <p className="text-xs text-[#A89F91]/60 font-sans mt-2">
+          <p className="text-xs text-gray-400 dark:text-gray-500 font-sans mt-2">
             Peculiar Pioneers Ministry
           </p>
         </div>
