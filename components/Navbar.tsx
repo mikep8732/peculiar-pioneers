@@ -8,6 +8,7 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/watch', label: 'Watch' },
   { href: '/beliefs', label: 'Beliefs' },
+  { href: '/evidence', label: 'Evidence' },
   { href: '/about', label: 'About' },
   { href: '/contact', label: 'Contact' },
   { href: '/donate', label: 'Donate' },
