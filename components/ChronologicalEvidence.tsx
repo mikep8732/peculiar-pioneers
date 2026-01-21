@@ -949,7 +949,7 @@ export default function ChronologicalEvidence() {
                 onClick={() => toggleFilter(key)}
                 className={`filter-btn flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-sans font-medium border transition-all ${
                   activeFilters.has(key)
-                    ? 'border-transparent text-gray-900'
+                    ? 'border-transparent text-white'
                     : 'border-gray-300 dark:border-gray-600 text-gray-500 dark:text-gray-400 hover:border-gray-400 dark:hover:border-gray-500'
                 }`}
                 style={{
