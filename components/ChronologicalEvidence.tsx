@@ -53,12 +53,43 @@ const timelineData = {
           { type: "disease", text: "Cholera epidemic continues; reaches epidemic proportions in many U.S. cities" },
           { type: "fire", text: "Great Fire of San Francisco (first of many)" },
         ], quote: { text: "The terrible reports we hear of murders and robberies, of railway accidents and deeds of violence, tell the story that the end of all things is at hand.", source: "Ellen G. White, Letter 308, 1907" }},
+        { year: 1851, events: [
+          { type: "fire", text: "Multiple fires devastate San Francisco" },
+          { type: "fire", text: "Fires destroy portions of Marysville, California" },
+          { type: "disease", text: "Cholera continues to claim lives across America" },
+          { type: "storm", text: "Major hurricane strikes Jamaica" },
+        ]},
+        { year: 1852, events: [
+          { type: "fire", text: "Great Fire in Sonora, California" },
+          { type: "fire", text: "Sacramento's Great Fire devastates the city" },
+          { type: "disaster", text: "Steamboat explosions continue to claim hundreds of lives" },
+          { type: "famine", text: "Irish Famine officially ends—death toll estimated at 1 million+" },
+        ]},
+        { year: 1853, events: [
+          { type: "disaster", text: "Explosion of the Jenny Lind steamboat" },
+          { type: "flood", text: "Major floods in California valleys" },
+          { type: "disaster", text: "Sinking of the Winfield Scott" },
+          { type: "disaster", text: "December 24: Steamer San Francisco founders; 240 of 700 passengers drown" },
+          { type: "disease", text: "Yellow fever epidemic in New Orleans kills thousands" },
+        ]},
         { year: 1854, events: [
           { type: "disaster", text: "Wreck of the Yankee Blade" },
           { type: "disaster", text: "November 13: Immigrant ship New Era wrecks off New Jersey coast; 300+ dead" },
           { type: "disease", text: "Cholera epidemic in London; Dr. John Snow traces source" },
           { type: "war", text: "Crimean War intensifies; massive casualties" },
         ], quote: { text: "God has not restrained the powers of darkness from carrying forward their deadly work of vitiating the air, one of the sources of life and nutrition, with a deadly miasma.", source: "Ellen G. White, Selected Messages 3:391 (1891)" }},
+        { year: 1855, events: [
+          { type: "disaster", text: "Explosion of the Pearl steamboat" },
+          { type: "disease", text: "Yellow fever epidemic spreads through U.S. South" },
+          { type: "crime", text: "\"Bleeding Kansas\" violence begins—prelude to Civil War" },
+          { type: "earthquake", text: "Major earthquake in Japan" },
+        ]},
+        { year: 1856, events: [
+          { type: "disaster", text: "Explosion of the Belle steamboat" },
+          { type: "fire", text: "Great Nevada City Fire in California" },
+          { type: "storm", text: "Hurricane strikes Last Island, Louisiana—over 200 dead" },
+          { type: "crime", text: "Continued violence in Kansas Territory" },
+        ]},
         { year: 1857, events: [
           { type: "earthquake", text: "January 9: Fort Tejon earthquake (M7.9)—largest in Southern California history" },
           { type: "disaster", text: "September 12: SS Central America sinks in hurricane; 425+ dead; $2 million in gold lost" },
@@ -73,6 +104,12 @@ const timelineData = {
         { year: 1859, events: [
           { type: "disaster", text: "September 1-2: Carrington Event—massive solar storm; telegraph systems fail worldwide" },
           { type: "war", text: "John Brown's raid on Harpers Ferry—prelude to Civil War" },
+        ]},
+        { year: 1860, events: [
+          { type: "disaster", text: "Lady Elgin disaster on Lake Michigan; 300+ dead" },
+          { type: "war", text: "Abraham Lincoln elected President—Southern secession begins" },
+          { type: "earthquake", text: "Major earthquake in Mendoza, Argentina; thousands killed" },
+          { type: "war", text: "First New Zealand Wars begin" },
         ]},
         { year: 1861, events: [
           { type: "war", text: "AMERICAN CIVIL WAR BEGINS—will claim 620,000+ lives" },
@@ -89,11 +126,29 @@ const timelineData = {
           { type: "crime", text: "New York City Draft Riots—120+ dead" },
           { type: "prophecy", text: "May 21: Seventh-day Adventist Church officially organized" },
         ]},
+        { year: 1864, events: [
+          { type: "disaster", text: "Explosion of the Washoe steamboat" },
+          { type: "crime", text: "Sand Creek Massacre—150+ Cheyenne and Arapaho killed" },
+          { type: "storm", text: "September: Hurricane devastates Calcutta, India; 70,000 dead" },
+          { type: "war", text: "Civil War continues with massive casualties" },
+        ]},
         { year: 1865, events: [
           { type: "crime", text: "April 14: President Abraham Lincoln assassinated" },
           { type: "disaster", text: "April 27: Steamboat Sultana explodes; 1,800 dead—worst maritime disaster in U.S. history" },
           { type: "war", text: "Civil War ends—total dead: 620,000+" },
         ], quote: { text: "Famines will increase. Pestilences will sweep away thousands. Dangers are all around us from the powers without and satanic workings within, but the restraining power of God is now being exercised.", source: "Ellen G. White, Manuscript Releases 19:382 (1897)" }},
+        { year: 1866, events: [
+          { type: "disaster", text: "Deadly explosion in San Francisco" },
+          { type: "earthquake", text: "May 12: Major earthquake in Turkey (Bingöl region)" },
+          { type: "disease", text: "Cholera epidemic spreads through Europe and America" },
+          { type: "famine", text: "Famine in Algeria (1866-1868)—820,000 deaths" },
+        ]},
+        { year: 1867, events: [
+          { type: "earthquake", text: "December 18: Taiwan earthquake and tsunami" },
+          { type: "famine", text: "Swedish Famine begins (1867-1869)" },
+          { type: "storm", text: "Hurricane strikes St. Thomas; 600 dead" },
+          { type: "disease", text: "Yellow fever epidemic in multiple U.S. cities" },
+        ]},
         { year: 1868, events: [
           { type: "earthquake", text: "October 21: Hayward earthquake devastates San Francisco Bay area" },
           { type: "earthquake", text: "August: Peru-Chile earthquake and tsunami; 25,000+ dead" },
@@ -114,6 +169,12 @@ const timelineData = {
         source: "Ellen G. White, Manuscript 127, 1897"
       },
       events: [
+        { year: 1870, events: [
+          { type: "war", text: "Franco-Prussian War begins; hundreds of thousands will die" },
+          { type: "famine", text: "Paris Commune siege and starvation" },
+          { type: "economic", text: "Long Depression begins (1870-1890)—economic suffering worldwide" },
+          { type: "disaster", text: "Multiple railroad disasters as train travel expands" },
+        ]},
         { year: 1871, events: [
           { type: "fire", text: "October 8-10: GREAT CHICAGO FIRE—300 dead, 100,000 homeless, $200 million damage" },
           { type: "fire", text: "October 8: PESHTIGO FIRE—deadliest wildfire in U.S. history; 1,500-2,500 dead" },
@@ -121,6 +182,11 @@ const timelineData = {
           { type: "famine", text: "Persian Famine (1871-1872)—2 million dead" },
           { type: "flood", text: "Vietnam floods kill estimated 100,000 in Red River delta" },
         ], quote: { text: "I have seen the most costly structures in buildings erected and supposed to be fireproof, and just as Sodom perished in the flames of God's vengeance so will these proud structures become ashes.", source: "Ellen G. White, Selected Messages 3:418 (1901)" }},
+        { year: 1872, events: [
+          { type: "fire", text: "Great Boston Fire—776 buildings destroyed" },
+          { type: "crime", text: "Credit Mobilier scandal exposed—government corruption" },
+          { type: "disaster", text: "Numerous mining disasters as industry expands" },
+        ]},
         { year: 1873, events: [
           { type: "economic", text: "Financial Panic of 1873—triggers global economic depression" },
           { type: "disease", text: "Yellow fever epidemic in multiple cities" },
@@ -130,24 +196,66 @@ const timelineData = {
           { type: "storm", text: "Typhoon in Hong Kong; thousands dead" },
           { type: "flood", text: "Mill River Dam failure—Massachusetts; 139 dead" },
         ], quote: { text: "The perversity and cruelty of men will reach such a height that God will reveal Himself in His majesty. Very soon the wickedness of the world will have reached its limit.", source: "Ellen G. White, The Upward Look, 334 (1903)" }},
+        { year: 1875, events: [
+          { type: "disaster", text: "Grasshopper plague continues" },
+          { type: "storm", text: "Major hurricane season" },
+          { type: "economic", text: "Continued economic depression" },
+          { type: "disaster", text: "Coal mining disasters claim hundreds" },
+        ]},
         { year: 1876, events: [
           { type: "war", text: "June 25: Battle of Little Bighorn—Custer and 268 soldiers killed" },
           { type: "earthquake", text: "July 28: TANGSHAN EARTHQUAKE (China)—242,769+ dead; possibly 655,000+" },
           { type: "fire", text: "Brooklyn Theater fire—278 dead" },
         ]},
+        { year: 1877, events: [
+          { type: "crime", text: "Great Railroad Strike—nationwide violence; 100+ killed" },
+          { type: "war", text: "Nez Perce War" },
+          { type: "disaster", text: "Major drought affects multiple regions" },
+          { type: "disease", text: "Yellow fever epidemic in South" },
+        ]},
         { year: 1878, events: [
           { type: "disease", text: "Yellow fever epidemic in Memphis—5,000+ dead" },
           { type: "disaster", text: "Princess Alice steamship disaster—650 dead (England)" },
         ], quote: { text: "The earth's crust will be rent by the outbursts of the elements concealed in the bowels of the earth.", source: "Ellen G. White, Manuscript Releases 3:208 (1891)" }},
+        { year: 1879, events: [
+          { type: "disaster", text: "Tay Bridge disaster—75+ dead as train plunges into water (Scotland)" },
+          { type: "flood", text: "Major floods in Hungary" },
+          { type: "economic", text: "Continued economic hardship from depression" },
+          { type: "war", text: "Indian Wars continue in American West" },
+        ]},
+        { year: 1880, events: [
+          { type: "disaster", text: "Seabright excursion train wreck—23 dead" },
+          { type: "crime", text: "Mussel Slough Tragedy—California land dispute shootout" },
+          { type: "disaster", text: "SS Jeddah abandonment scandal" },
+          { type: "disaster", text: "Multiple mining disasters" },
+        ]},
         { year: 1881, events: [
           { type: "crime", text: "July 2: President James Garfield shot (dies September 19)" },
           { type: "storm", text: "Haiphong Typhoon—300,000 dead (Vietnam)" },
           { type: "crime", text: "Anti-Jewish pogroms begin in Russia" },
         ]},
+        { year: 1882, events: [
+          { type: "flood", text: "Massive flooding in Germany" },
+          { type: "crime", text: "Jesse James killed—outlaw era continues" },
+          { type: "crime", text: "Triple murder in New Hampshire" },
+          { type: "crime", text: "Increased anti-Chinese violence in American West" },
+        ]},
         { year: 1883, events: [
           { type: "volcano", text: "August 27: KRAKATOA ERUPTION—36,000+ dead; loudest sound in recorded history; tsunamis reach 100+ feet" },
           { type: "fire", text: "Newhall House fire—71 dead (Milwaukee)" },
         ], quote: { text: "Before the Son of man appears in the clouds of heaven everything in nature will be convulsed. Lightning from heaven uniting with the fire in the earth will cause the mountains to burn like a furnace.", source: "Ellen G. White, The S.D.A. Bible Commentary 7:946 (1907)" }},
+        { year: 1884, events: [
+          { type: "crime", text: "Cincinnati Courthouse Riot—56 dead" },
+          { type: "flood", text: "Flooding in Ohio Valley" },
+          { type: "storm", text: "Great cyclone in Southern states" },
+          { type: "disaster", text: "Mining disasters claim hundreds" },
+        ]},
+        { year: 1885, events: [
+          { type: "crime", text: "Rock Springs Massacre—Chinese miners killed" },
+          { type: "war", text: "Riel Rebellion in Canada" },
+          { type: "disease", text: "Smallpox epidemic in Montreal; 3,000+ dead" },
+          { type: "storm", text: "Major hurricane season" },
+        ]},
         { year: 1886, events: [
           { type: "earthquake", text: "September 1: CHARLESTON EARTHQUAKE—60 dead; largest earthquake in eastern U.S." },
           { type: "crime", text: "Haymarket Affair—bombing and violence in Chicago" },
@@ -171,6 +279,12 @@ const timelineData = {
           { type: "storm", text: "Louisville tornado—100+ dead" },
           { type: "disease", text: "Major influenza pandemic (1889-1890)—1 million dead worldwide" },
         ]},
+        { year: 1891, events: [
+          { type: "earthquake", text: "October 28: Mino-Owari earthquake (Japan)—7,273 dead" },
+          { type: "crime", text: "March 14: New Orleans mob lynches 11 Italians" },
+          { type: "fire", text: "Forest fires devastate multiple states" },
+          { type: "storm", text: "Major hurricane season" },
+        ]},
         { year: 1892, events: [
           { type: "prophecy", text: "CRITICAL PROPHETIC MILESTONE: Sunday law legislation passes Congress (Columbian Exposition)" },
           { type: "prophecy", text: "Protestant churches unite with Catholics to petition for Sunday enforcement" },
@@ -188,10 +302,22 @@ const timelineData = {
           { type: "fire", text: "Great Hinckley Fire—418 dead (Minnesota)" },
           { type: "crime", text: "Pullman Strike—nationwide railroad stoppage; Federal troops deployed" },
         ]},
+        { year: 1895, events: [
+          { type: "war", text: "Cuban War of Independence begins" },
+          { type: "fire", text: "Great fire in Cripple Creek, Colorado" },
+          { type: "storm", text: "Major hurricane season" },
+          { type: "disaster", text: "Heat wave kills hundreds" },
+        ]},
         { year: 1896, events: [
           { type: "earthquake", text: "June 15: SANRIKU EARTHQUAKE AND TSUNAMI (Japan)—27,000 dead" },
           { type: "storm", text: "St. Louis tornado—255 dead" },
         ], quote: { text: "There will be mighty earthquakes and great destruction of human life.", source: "Ellen G. White, The S.D.A. Bible Commentary 7:946 (1907)" }},
+        { year: 1897, events: [
+          { type: "earthquake", text: "Assam earthquake (India)—1,500 dead" },
+          { type: "disease", text: "Yellow fever epidemic in South" },
+          { type: "fire", text: "Fire in Paris charity bazaar—126 dead" },
+          { type: "disaster", text: "Numerous mining disasters" },
+        ]},
         { year: 1898, events: [
           { type: "war", text: "February 15: USS Maine explosion—266 dead; triggers Spanish-American War" },
           { type: "war", text: "Spanish-American War—2,446 U.S. deaths" },
@@ -317,13 +443,31 @@ const timelineData = {
           { type: "crime", text: "May 31-June 1: TULSA RACE MASSACRE—100-300 dead; \"Black Wall Street\" destroyed" },
           { type: "famine", text: "Russian Famine begins—5 million will die" },
         ], quote: { text: "When God's restraining hand is removed, the destroyer begins his work. Then in our cities the greatest calamities will come.", source: "Ellen G. White, Manuscript Releases 3:314 (1897)" }},
+        { year: 1922, events: [
+          { type: "storm", text: "Swatow Typhoon (China)—60,000 dead" },
+          { type: "war", text: "November: Italian Fascists march on Rome" },
+          { type: "crime", text: "Herrin Massacre—23 dead (Illinois mining strike)" },
+          { type: "disaster", text: "Knickerbocker Theater collapse—98 dead" },
+        ]},
         { year: 1923, events: [
           { type: "earthquake", text: "September 1: GREAT KANTO EARTHQUAKE (Japan)—142,800 dead; Tokyo and Yokohama devastated" },
           { type: "crime", text: "Rosewood Massacre—Florida" },
         ]},
+        { year: 1924, events: [
+          { type: "storm", text: "Lorain-Sandusky tornado—85 dead (Ohio)" },
+          { type: "crime", text: "Leopold and Loeb murder" },
+          { type: "war", text: "Chinese Civil War violence" },
+          { type: "flood", text: "Major flood season" },
+        ]},
         { year: 1925, events: [
           { type: "storm", text: "March 18: TRI-STATE TORNADO—695 dead; deadliest tornado in U.S. history" },
         ], quote: { text: "Terrible shocks will come upon the earth, and the lordly palaces erected at great expense will certainly become heaps of ruins.", source: "Ellen G. White, Manuscript Releases 3:312 (1891)" }},
+        { year: 1926, events: [
+          { type: "storm", text: "September 18: Great Miami Hurricane—372 dead; $100 million damage" },
+          { type: "flood", text: "Santa Cruz de Mompox flood—80 dead" },
+          { type: "crime", text: "Violent labor disputes" },
+          { type: "crime", text: "Ku Klux Klan membership peaks" },
+        ]},
         { year: 1927, events: [
           { type: "flood", text: "April-August: GREAT MISSISSIPPI FLOOD—500+ dead; 700,000 displaced" },
           { type: "crime", text: "May: Bath School disaster—44 dead (Michigan; first mass school murder)" },
@@ -348,9 +492,28 @@ const timelineData = {
         source: "Ellen G. White, Maranatha, 174 (1897)"
       },
       events: [
+        { year: 1930, events: [
+          { type: "disaster", text: "Drought conditions intensify across Great Plains" },
+          { type: "fire", text: "Ohio Penitentiary fire—322 dead" },
+          { type: "disaster", text: "R101 airship disaster—48 dead" },
+          { type: "economic", text: "Bank failures accelerate—744 banks close" },
+        ]},
         { year: 1931, events: [
           { type: "flood", text: "July-November: CHINA FLOODS—1-4 MILLION DEAD; deadliest natural disaster of 20th century" },
           { type: "earthquake", text: "Napier, New Zealand earthquake—256 dead" },
+          { type: "storm", text: "Dust storms begin in Great Plains" },
+        ]},
+        { year: 1932, events: [
+          { type: "storm", text: "March 21: Tri-state tornado outbreak—330 dead" },
+          { type: "crime", text: "Bonus Army marchers attacked in Washington" },
+          { type: "disaster", text: "Great Plains drought intensifies" },
+          { type: "economic", text: "25% unemployment in U.S." },
+        ]},
+        { year: 1933, events: [
+          { type: "earthquake", text: "March 10: Long Beach earthquake—115 dead" },
+          { type: "war", text: "Adolf Hitler becomes Chancellor of Germany" },
+          { type: "crime", text: "Reichstag Fire" },
+          { type: "economic", text: "Bank holiday declared in U.S." },
         ]},
         { year: 1934, events: [
           { type: "storm", text: "\"BLACK SUNDAY\" Dust Storm devastates Great Plains" },
@@ -379,6 +542,12 @@ const timelineData = {
           { type: "war", text: "September 1: WORLD WAR II BEGINS—will kill 70-85 million" },
           { type: "earthquake", text: "December 26: Erzincan earthquake (Turkey)—33,000 dead" },
         ], quote: { text: "In quick succession the judgments of God will follow one another—fire, and flood, and earthquake, with war and bloodshed.", source: "Ellen G. White, Prophets and Kings, 278 (c. 1914)" }},
+        { year: 1940, events: [
+          { type: "war", text: "April 9: Germany invades Denmark and Norway" },
+          { type: "war", text: "May 10: Germany invades Belgium, Netherlands, Luxembourg, France" },
+          { type: "war", text: "Dunkirk evacuation—40,000 killed" },
+          { type: "fire", text: "Rhythm Club fire—209 dead (Mississippi)" },
+        ]},
         { year: 1941, events: [
           { type: "war", text: "December 7: PEARL HARBOR ATTACK—2,403 dead; U.S. enters WWII" },
           { type: "war", text: "June 22: Germany invades Soviet Union" },
@@ -403,6 +572,12 @@ const timelineData = {
           { type: "war", text: "August 9: NAGASAKI ATOMIC BOMB—40,000 immediate dead; 70,000 total" },
           { type: "war", text: "May 8: World War II ends in Europe—TOTAL DEAD: 70-85 MILLION" },
         ]},
+        { year: 1946, events: [
+          { type: "earthquake", text: "April 1: Aleutian earthquake triggers tsunami—165 dead in Hawaii" },
+          { type: "fire", text: "Winecoff Hotel fire—119 dead" },
+          { type: "war", text: "Chinese Civil War intensifies" },
+          { type: "war", text: "Beginning of Cold War" },
+        ]},
         { year: 1947, events: [
           { type: "disaster", text: "April 16-17: TEXAS CITY DISASTER—581 dead; ship explosion" },
           { type: "storm", text: "April 9: Woodward-Glazier tornado—181 dead" },
@@ -420,6 +595,12 @@ const timelineData = {
           { type: "earthquake", text: "August 15: ASSAM EARTHQUAKE (India)—1,526 dead; M8.6" },
           { type: "war", text: "June 25: KOREAN WAR BEGINS—3 million will die" },
         ]},
+        { year: 1951, events: [
+          { type: "flood", text: "Great Flood of 1951 (Kansas)—17 dead; $935 million damage" },
+          { type: "disaster", text: "Woodbridge train wreck—85 dead" },
+          { type: "war", text: "Korean War intensifies" },
+          { type: "disaster", text: "Multiple airplane crashes" },
+        ]},
         { year: 1952, events: [
           { type: "earthquake", text: "November 4: Kamchatka earthquake (Russia)—M9.0; one of largest ever recorded" },
           { type: "disease", text: "December 5-9: GREAT SMOG OF LONDON—4,000 immediate dead; 12,000 total" },
@@ -428,6 +609,24 @@ const timelineData = {
           { type: "flood", text: "North Sea flood—2,551 dead (Netherlands, UK, Belgium)" },
           { type: "storm", text: "May 11: WACO TORNADO—114 dead" },
           { type: "storm", text: "June 8: Flint-Worcester tornado outbreak—247 dead" },
+        ]},
+        { year: 1954, events: [
+          { type: "storm", text: "September 26: Typhoon Marie (Japan)—1,761 dead" },
+          { type: "storm", text: "Hurricane Carol—65 dead" },
+          { type: "storm", text: "Hurricane Hazel—1,000 dead" },
+          { type: "earthquake", text: "Orléansville earthquake (Algeria)—1,409 dead" },
+        ]},
+        { year: 1955, events: [
+          { type: "storm", text: "August: Hurricane Diane—200 dead" },
+          { type: "disaster", text: "June 11: Le Mans disaster—84 dead (racing crash)" },
+          { type: "war", text: "Vietnam War begins (U.S. involvement)" },
+          { type: "crime", text: "Rosa Parks arrested—civil rights movement grows" },
+        ]},
+        { year: 1956, events: [
+          { type: "war", text: "Hungarian Revolution—2,500+ dead" },
+          { type: "disaster", text: "Andrea Doria sinks—51 dead" },
+          { type: "war", text: "Suez Crisis" },
+          { type: "disaster", text: "Grand Canyon plane collision—128 dead" },
         ]},
         { year: 1957, events: [
           { type: "earthquake", text: "March 9: Andreanof Islands earthquake—M9.1" },
@@ -459,6 +658,18 @@ const timelineData = {
           { type: "earthquake", text: "May 22: GREAT CHILEAN EARTHQUAKE—M9.5; LARGEST EARTHQUAKE EVER RECORDED; 1,655 dead" },
           { type: "earthquake", text: "February 29: Agadir earthquake (Morocco)—12,000-15,000 dead" },
         ]},
+        { year: 1961, events: [
+          { type: "storm", text: "Hurricane Carla—46 dead" },
+          { type: "war", text: "Berlin Wall constructed" },
+          { type: "war", text: "Bay of Pigs invasion" },
+          { type: "crime", text: "Freedom Riders attacked" },
+        ]},
+        { year: 1962, events: [
+          { type: "disaster", text: "September: Yamanashi landslide (Japan)—262 dead" },
+          { type: "war", text: "Cuban Missile Crisis—world on brink of nuclear war" },
+          { type: "storm", text: "October: Columbus Day Storm—46 dead" },
+          { type: "fire", text: "Centralia mine fire begins (still burning)" },
+        ]},
         { year: 1963, events: [
           { type: "crime", text: "November 22: PRESIDENT JOHN F. KENNEDY ASSASSINATED" },
           { type: "flood", text: "October 9: Vajont Dam disaster (Italy)—2,000 dead" },
@@ -477,6 +688,12 @@ const timelineData = {
         { year: 1966, events: [
           { type: "disaster", text: "October 21: Aberfan disaster (Wales)—144 dead; coal slag engulfs school" },
           { type: "crime", text: "August: Texas Tower mass shooting—17 dead" },
+        ]},
+        { year: 1967, events: [
+          { type: "crime", text: "July: Newark race riot—26 dead" },
+          { type: "crime", text: "July: Detroit race riot—43 dead" },
+          { type: "earthquake", text: "Caracas earthquake—266 dead" },
+          { type: "war", text: "Six-Day War (Middle East)" },
         ]},
         { year: 1968, events: [
           { type: "crime", text: "April 4: MARTIN LUTHER KING JR. ASSASSINATED" },
@@ -498,6 +715,18 @@ const timelineData = {
           { type: "flood", text: "Vietnam floods—100,000 dead" },
           { type: "war", text: "Bangladesh Liberation War—3 million dead" },
         ]},
+        { year: 1972, events: [
+          { type: "flood", text: "February 26: Buffalo Creek flood—125 dead" },
+          { type: "flood", text: "June 9: Rapid City flood—238 dead" },
+          { type: "storm", text: "Hurricane Agnes—122 dead" },
+          { type: "crime", text: "Munich Olympics massacre—11 Israeli athletes killed" },
+        ]},
+        { year: 1973, events: [
+          { type: "storm", text: "May 26-27: Tornado super outbreak—10+ tornadoes" },
+          { type: "war", text: "Yom Kippur War—over 20,000 dead" },
+          { type: "economic", text: "Oil embargo begins" },
+          { type: "crime", text: "Chilean coup—thousands killed" },
+        ]},
         { year: 1974, events: [
           { type: "storm", text: "April 3-4: 1974 SUPER OUTBREAK—148 tornadoes; 335 dead" },
           { type: "storm", text: "December 25: Cyclone Tracy—71 dead (Australia)" },
@@ -512,6 +741,12 @@ const timelineData = {
           { type: "earthquake", text: "July 28: TANGSHAN EARTHQUAKE (China)—242,769 official dead; possibly 655,000+" },
           { type: "earthquake", text: "February 4: Guatemala earthquake—23,000 dead" },
           { type: "flood", text: "Big Thompson Canyon flood—143 dead" },
+        ]},
+        { year: 1977, events: [
+          { type: "crime", text: "July 13-14: New York City blackout—looting, arson; 3,776 arrested" },
+          { type: "earthquake", text: "March 4: Romania earthquake—1,578 dead" },
+          { type: "disaster", text: "Tenerife airport disaster—583 dead; deadliest aviation accident" },
+          { type: "fire", text: "Beverly Hills Supper Club fire—165 dead" },
         ]},
         { year: 1978, events: [
           { type: "earthquake", text: "September 16: Tabas earthquake (Iran)—25,000 dead" },
@@ -531,6 +766,18 @@ const timelineData = {
           { type: "crime", text: "March 30: President Reagan assassination attempt" },
           { type: "disease", text: "AIDS pandemic identified" },
         ]},
+        { year: 1982, events: [
+          { type: "volcano", text: "March-April: El Chichón eruption—1,900 dead (Mexico)" },
+          { type: "war", text: "Lebanon War begins—20,000 will die" },
+          { type: "crime", text: "Sabra and Shatila massacre—800-3,500 dead" },
+          { type: "crime", text: "Tylenol murders—7 dead" },
+        ]},
+        { year: 1983, events: [
+          { type: "crime", text: "October 23: Beirut barracks bombing—307 dead" },
+          { type: "earthquake", text: "May 2: Coalinga earthquake (California)" },
+          { type: "disaster", text: "Korean Air Lines Flight 007 shot down—269 dead" },
+          { type: "storm", text: "Hurricane Alicia—21 dead" },
+        ]},
         { year: 1984, events: [
           { type: "disaster", text: "December 3: BHOPAL DISASTER—3,787-16,000 dead; worst industrial disaster" },
           { type: "crime", text: "July 18: San Ysidro McDonald's massacre—22 dead" },
@@ -544,6 +791,12 @@ const timelineData = {
           { type: "disaster", text: "April 26: CHERNOBYL NUCLEAR DISASTER—31 immediate dead; thousands eventual" },
           { type: "disaster", text: "January 28: Space Shuttle Challenger disaster—7 dead" },
           { type: "disaster", text: "August 21: Lake Nyos gas disaster—1,700 dead (Cameroon)" },
+        ]},
+        { year: 1987, events: [
+          { type: "economic", text: "October 19: \"Black Monday\" stock market crash" },
+          { type: "disaster", text: "March 6: Herald of Free Enterprise sinking—193 dead" },
+          { type: "storm", text: "Edmond, Oklahoma tornado—35 dead" },
+          { type: "disaster", text: "Northwest Airlines Flight 255 crash—156 dead" },
         ]},
         { year: 1988, events: [
           { type: "earthquake", text: "December 7: SPITAK EARTHQUAKE (Armenia)—25,000-50,000 dead" },
@@ -596,6 +849,18 @@ const timelineData = {
           { type: "crime", text: "April 19: Oklahoma City bombing—168 dead" },
           { type: "disaster", text: "July: Chicago heat wave—739 dead" },
         ]},
+        { year: 1996, events: [
+          { type: "disaster", text: "TWA Flight 800 crash—230 dead" },
+          { type: "crime", text: "Olympic Park bombing—2 dead" },
+          { type: "storm", text: "June: Tornado outbreak—75 dead" },
+          { type: "disaster", text: "ValuJet Flight 592 crash—110 dead" },
+        ]},
+        { year: 1997, events: [
+          { type: "flood", text: "Red River Flood—extensive damage" },
+          { type: "storm", text: "May 27: Jarrell, Texas tornado—27 dead" },
+          { type: "crime", text: "Heaven's Gate mass suicide—39 dead" },
+          { type: "economic", text: "Asian financial crisis begins" },
+        ]},
         { year: 1998, events: [
           { type: "storm", text: "October: HURRICANE MITCH—11,000+ dead; deadliest Atlantic hurricane since 1900" },
           { type: "earthquake", text: "May 30: Afghanistan earthquake—4,000 dead" },
@@ -607,10 +872,22 @@ const timelineData = {
           { type: "crime", text: "April 20: COLUMBINE SCHOOL SHOOTING—15 dead" },
           { type: "earthquake", text: "September 21: Chi-Chi earthquake (Taiwan)—2,415 dead" },
         ], quote: { text: "Men will continue to erect expensive buildings, costing millions of money... but the Lord has instructed me that despite the unusual firmness and expensive display, these buildings will share the fate of the temple in Jerusalem.", source: "Ellen G. White, The S.D.A. Bible Commentary 5:1098" }},
+        { year: 2000, events: [
+          { type: "crime", text: "October 12: USS Cole bombing—17 dead" },
+          { type: "disaster", text: "June: Southern Asia heat wave—thousands dead" },
+          { type: "disaster", text: "Air France Concorde crash—113 dead" },
+          { type: "prophecy", text: "Y2K fears (unrealized but significant)" },
+        ]},
         { year: 2001, events: [
           { type: "crime", text: "September 11: TERRORIST ATTACKS ON UNITED STATES—2,977 dead" },
           { type: "earthquake", text: "January 26: Gujarat earthquake (India)—20,023 dead" },
           { type: "war", text: "War in Afghanistan begins" },
+        ]},
+        { year: 2002, events: [
+          { type: "crime", text: "October 12: Bali bombings—202 dead" },
+          { type: "crime", text: "Beltway sniper attacks—17 dead" },
+          { type: "flood", text: "Floods devastate Europe" },
+          { type: "disease", text: "SARS outbreak begins" },
         ]},
         { year: 2003, events: [
           { type: "war", text: "March 20: Iraq War begins—hundreds of thousands will die" },
@@ -626,6 +903,18 @@ const timelineData = {
           { type: "storm", text: "August 29: HURRICANE KATRINA—1,833 dead; $125 billion damage" },
           { type: "earthquake", text: "October 8: Kashmir earthquake—86,000 dead" },
           { type: "crime", text: "July 7: London bombings—56 dead" },
+        ]},
+        { year: 2006, events: [
+          { type: "earthquake", text: "May 27: Java earthquake—5,749 dead" },
+          { type: "disaster", text: "July 17: Java tsunami—802 dead" },
+          { type: "war", text: "Lebanon War—over 1,500 dead" },
+          { type: "crime", text: "Multiple mass shootings" },
+        ]},
+        { year: 2007, events: [
+          { type: "earthquake", text: "August 15: Peru earthquake—519 dead" },
+          { type: "storm", text: "Cyclone Sidr (Bangladesh)—4,234 dead" },
+          { type: "crime", text: "Virginia Tech shooting—33 dead" },
+          { type: "fire", text: "California wildfires—22 dead" },
         ]},
         { year: 2008, events: [
           { type: "earthquake", text: "May 12: SICHUAN EARTHQUAKE (China)—69,227 dead" },
@@ -663,6 +952,12 @@ const timelineData = {
         { year: 2015, events: [
           { type: "earthquake", text: "April 25: NEPAL EARTHQUAKE—8,857 dead" },
           { type: "crime", text: "November 13: Paris attacks—130 dead" },
+        ]},
+        { year: 2016, events: [
+          { type: "earthquake", text: "April 16: Ecuador earthquake—676 dead" },
+          { type: "crime", text: "June 12: Orlando nightclub shooting—50 dead" },
+          { type: "storm", text: "October 4: Hurricane Matthew—603 dead" },
+          { type: "crime", text: "July 14: Nice truck attack—87 dead" },
         ]},
         { year: 2017, events: [
           { type: "earthquake", text: "September 19: Mexico earthquake—370 dead" },
