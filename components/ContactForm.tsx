@@ -52,8 +52,12 @@ export default function ContactForm() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission - replace with your actual submission logic
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    // Create mailto link with form data
+    const subject = formData.isPrayerRequest ? 'Prayer Request' : 'Contact Form Message'
+    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+    const mailtoLink = `mailto:peculiarpioneers@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
+
+    window.location.href = mailtoLink
 
     removeLocalStorage(STORAGE_KEY)
     setIsSubmitting(false)

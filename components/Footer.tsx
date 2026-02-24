@@ -25,6 +25,12 @@ export default function Footer() {
             <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
               Proclaiming present truth for these last days
             </p>
+            <a
+              href="mailto:peculiarpioneers@gmail.com"
+              className="mt-2 inline-block text-sm text-gray-500 dark:text-gray-400 hover:text-gold dark:hover:text-gold transition-colors"
+            >
+              peculiarpioneers@gmail.com
+            </a>
           </div>
 
           <nav className="flex flex-wrap justify-center gap-6">
