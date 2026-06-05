@@ -3,9 +3,29 @@
     "All Episodes",
     "2300 Day Prophecy",
     "Sanctuary",
-    "ID'ing Christ"
+    "ID'ing Christ",
+    "Current Events"
   ],
   "videos": [
+    {
+      "id": "1Diq7ME6ut8",
+      "slug": "revisiting-charlie-kirk-shooting-sda-church",
+      "title": "Revisiting the Charlie Kirk Shooting: How This Divided the SDA Church",
+      "description": "The Charlie Kirk shooting didn't just shake the political world—it exposed a deep division inside the SDA Church. In this episode we turn to the Bible and the Spirit of Prophecy, including Ellen White's 1899 prophecy on civil war and the centralizing of wealth, to examine the shaking of God's remnant people, the close of probation, and what every believer should be doing right now.",
+      "date": "2026-04-09",
+      "category": "Current Events",
+      "duration": "1:37:13",
+      "featured": true
+    },
+    {
+      "id": "onRTGYSJKXw",
+      "slug": "three-angels-message-sanctuary-truth",
+      "title": "The Three Angels' Message & The Sanctuary Truth: (Day of Atonement Study)",
+      "description": "In this Bible study we connect the Day of Atonement to the Investigative Judgment, the heavenly sanctuary, and the Three Angels' Messages of Revelation 14. We explore why Revelation points back to God's law in the Most Holy Place, why 'Babylon is fallen' is a call to come out of false worship, and how the final conflict centers on worship, the commandments of God, and the faith of Jesus.",
+      "date": "2026-03-03",
+      "category": "Sanctuary",
+      "duration": "1:20:39"
+    },
     {
       "id": "6hYDUX1Yfjc",
       "slug": "day-of-atonement-cleansing-of-the-sanctuary",
@@ -13,8 +33,7 @@
       "description": "In this Bible study, we break down the Day of Atonement and the cleansing of the sanctuary—why God established it, what it reveals about sin and atonement, and how it connects to the judgment and the opening of the books. We walk through the sanctuary pattern, why atonement requires blood and a High Priest, and how Scripture shows judgment for the living and the dead.",
       "date": "2026-02-18",
       "category": "2300 Day Prophecy",
-      "duration": "56:30",
-      "featured": true
+      "duration": "56:30"
     },
     {
       "id": "S39Czcpi6OI",
