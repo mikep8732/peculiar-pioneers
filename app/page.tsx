@@ -1,10 +1,9 @@
 import Button from '@/components/Button'
 import SabbathCountdown from '@/components/SabbathCountdown'
 import siteContent from '@/content/site.json'
-import videosData from '@/content/videos.json'
+import { getAllVideos } from '@/lib/videos'
 
-// Get the featured/latest video
-const latestVideo = videosData.videos.find(v => v.featured) || videosData.videos[0]
+const latestVideo = getAllVideos()[0]
 
 export default function Home() {
   return (

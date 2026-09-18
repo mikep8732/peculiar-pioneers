@@ -10,7 +10,7 @@ interface VideoCardProps {
 }
 
 export default function VideoCard({ video }: VideoCardProps) {
-  const thumbnailUrl = getYouTubeThumbnail(video.id)
+  const thumbnailUrl = video.thumbnail || getYouTubeThumbnail(video.id)
   const isNew = isNewVideo(video.date)
 
   return (

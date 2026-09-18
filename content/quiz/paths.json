@@ -1,0 +1,56 @@
+{
+  "paths": [
+    {
+      "id": "sanctuary-foundations",
+      "title": "Sanctuary Foundations",
+      "description": "Discover the significance of the earthly and heavenly sanctuary in God's plan of salvation.",
+      "topic": "sanctuary",
+      "difficulty": "beginner",
+      "estimatedTime": "2-3 hours",
+      "icon": "sanctuary",
+      "modules": ["sanctuary-intro", "earthly-sanctuary", "heavenly-ministry"]
+    },
+    {
+      "id": "daniels-prophecies",
+      "title": "Daniel's Prophecies",
+      "description": "Unlock the prophetic timeline from Daniel 2 through the 2300-day prophecy.",
+      "topic": "prophecy",
+      "difficulty": "intermediate",
+      "estimatedTime": "4-5 hours",
+      "icon": "prophecy",
+      "modules": ["daniel-2", "daniel-7", "daniel-8-9", "2300-days"],
+      "prerequisites": ["sanctuary-foundations"]
+    },
+    {
+      "id": "sabbath-truth",
+      "title": "The Sabbath Truth",
+      "description": "Understand the biblical foundation and end-time significance of God's holy Sabbath.",
+      "topic": "sabbath",
+      "difficulty": "beginner",
+      "estimatedTime": "2-3 hours",
+      "icon": "sabbath",
+      "modules": ["sabbath-creation", "sabbath-law", "sabbath-blessing"]
+    },
+    {
+      "id": "three-angels",
+      "title": "The Three Angels' Messages",
+      "description": "Study the urgent messages of Revelation 14 for these last days.",
+      "topic": "prophecy",
+      "difficulty": "intermediate",
+      "estimatedTime": "3-4 hours",
+      "icon": "angels",
+      "modules": ["first-angel", "second-angel", "third-angel"],
+      "prerequisites": ["sanctuary-foundations", "sabbath-truth"]
+    },
+    {
+      "id": "signs-of-the-end",
+      "title": "Signs of the End",
+      "description": "Recognize the signs of Christ's soon return and prepare for final events.",
+      "topic": "last-days",
+      "difficulty": "intermediate",
+      "estimatedTime": "3-4 hours",
+      "icon": "endtimes",
+      "modules": ["signs-in-nature", "signs-in-society", "final-events"]
+    }
+  ]
+}

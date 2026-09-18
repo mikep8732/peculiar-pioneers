@@ -14,6 +14,7 @@ export interface Video {
   date: string
   category: string
   duration: string
+  thumbnail?: string
   featured?: boolean
   series?: Series
 }

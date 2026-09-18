@@ -3,13 +3,13 @@
 import { useEffect, useState } from 'react'
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark')
+  const [theme, setTheme] = useState<'light' | 'dark'>('light')
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
     setMounted(true)
     try {
-      const stored = localStorage.getItem('theme')
+      const stored = localStorage.getItem('theme-preference')
       if (stored === 'light' || stored === 'dark') {
         setTheme(stored)
       }
@@ -27,15 +27,16 @@ export default function ThemeToggle() {
     } else {
       root.classList.remove('dark')
     }
-    try {
-      localStorage.setItem('theme', theme)
-    } catch {
-      // localStorage not available
-    }
   }, [theme, mounted])
 
   const toggleTheme = () => {
-    setTheme(prev => prev === 'dark' ? 'light' : 'dark')
+    const nextTheme = theme === 'dark' ? 'light' : 'dark'
+    setTheme(nextTheme)
+    try {
+      localStorage.setItem('theme-preference', nextTheme)
+    } catch {
+      // localStorage not available
+    }
   }
 
   // Don't render anything until mounted to avoid hydration mismatch

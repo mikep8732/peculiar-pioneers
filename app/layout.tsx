@@ -23,7 +23,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               try {
-                const theme = localStorage.getItem('theme');
+                const theme = localStorage.getItem('theme-preference');
                 if (theme === 'dark') {
                   document.documentElement.classList.add('dark');
                 }
