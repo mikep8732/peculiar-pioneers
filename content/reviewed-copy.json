@@ -1,0 +1,268 @@
+{
+  "about": {
+    "title": "About Peculiar Pioneers",
+    "subtitle": "Who we are and why we do what we do",
+    "paragraphs": [
+      "Peculiar Pioneers is a Seventh-day Adventist ministry sharing the everlasting gospel and the three angels’ messages of Revelation 14. We invite people to know Jesus Christ, study His Word, and prepare for His return through repentance and faith in Him.",
+      "The everlasting gospel reveals God’s love in giving His Son to save us from sin. Jesus died for us, rose again, and ministers as our High Priest in the heavenly sanctuary. We depend on His righteousness for acceptance with God and on His Spirit to renew our hearts and enable us to obey His commandments.",
+      "The word ‘peculiar’ in our name comes from 1 Peter 2:9, where God’s people are called ‘a peculiar people’ and are to show forth His praises. The pioneers of the Advent movement remind us to search the Scriptures prayerfully, comparing passage with passage. We seek to study, live, and share the truths of God’s Word with humility and love.",
+      "Through sermons, Bible studies, and podcasts, we explain the sanctuary, the Sabbath, the three angels’ messages, and the hope of Christ’s return. We also encourage confession and the forsaking of sin, daily prayer, healthful living, and practical care for others. While Christ intercedes for us, His invitation to repent and receive His grace remains open; our purpose is to help people respond to Him now."
+    ],
+    "mission": "To proclaim the everlasting gospel and the three angels’ messages: calling people to repentance and faith in Jesus, announcing the hour of God’s judgment, honoring the Creator and His commandments, and sharing His call to leave Babylon and be ready for Christ’s return.",
+    "values": [
+      {
+        "title": "Scripture First",
+        "body": "The Bible is our rule of faith and practice. We study it prayerfully and test every teaching by its testimony."
+      },
+      {
+        "title": "Present Truth",
+        "body": "We share the everlasting gospel with the sanctuary, the Sabbath, the judgment, and the three angels’ messages as we look for Christ’s return."
+      },
+      {
+        "title": "Christ-Centered",
+        "body": "Jesus is our Saviour, righteousness, and High Priest. We depend on His grace for forgiveness and for a life of loving obedience."
+      },
+      {
+        "title": "Practical Godliness",
+        "body": "Faith in Christ bears fruit in honesty, kindness, modesty, temperance, and service. We seek to honor God in our thoughts, words, dress, health, and conduct."
+      }
+    ]
+  },
+  "beliefs": [
+    {
+      "title": "The Word of God",
+      "body": "The Holy Scriptures, Old and New Testaments, are the written Word of God. The Bible is the only rule of faith and practice, sufficient for all doctrine and instruction.",
+      "refs": [
+        "2 Timothy 3:16-17",
+        "2 Peter 1:20-21",
+        "Isaiah 8:20"
+      ],
+      "egwRefs": [
+        [
+          "GC",
+          37,
+          "595.1; 598.1–599.3"
+        ],
+        [
+          "SC",
+          10,
+          "89–91"
+        ]
+      ]
+    },
+    {
+      "title": "The Godhead",
+      "body": "There is one God: Father, Son, and Holy Spirit, a unity of three co-eternal Persons. God is immortal, all-powerful, all-knowing, above all, and ever present.",
+      "refs": [
+        "Deuteronomy 6:4",
+        "Matthew 28:19",
+        "1 John 5:7"
+      ]
+    },
+    {
+      "title": "Salvation in Jesus Christ",
+      "body": "God gave His Son to save us from sin. Christ draws us to repentance, offers forgiveness, and renews the heart. When we surrender to Him and receive Him by faith, His righteousness is our acceptance before God. We cannot earn salvation by our works; living faith bears fruit in loving obedience. We grow by daily dependence on Christ and the power of His Spirit.",
+      "refs": [
+        "John 3:16",
+        "Acts 5:31",
+        "1 John 1:9",
+        "Ephesians 2:8–10",
+        "John 15:4–5"
+      ],
+      "egwRefs": [
+        [
+          "SC",
+          3,
+          "23–26"
+        ],
+        [
+          "SC",
+          6,
+          "49–55"
+        ],
+        [
+          "SC",
+          7,
+          "59–63"
+        ],
+        [
+          "SC",
+          8,
+          "68–72"
+        ]
+      ]
+    },
+    {
+      "title": "The Sabbath",
+      "body": "The seventh day is the Sabbath of the Lord, a memorial of Creation and a sign of His sanctifying power. We observe it from Friday sunset to Saturday sunset, laying aside secular work for rest, worship, and fellowship with God. We honor the Sabbath as an expression of love and obedience to our Creator.",
+      "refs": [
+        "Genesis 2:1-3",
+        "Exodus 20:8-11",
+        "Isaiah 58:13-14",
+        "Mark 2:27-28",
+        "Leviticus 23:32",
+        "Ezekiel 20:12"
+      ],
+      "egwRefs": [
+        [
+          "GC",
+          25,
+          "433.2–437.2"
+        ],
+        [
+          "GC",
+          26,
+          "451.1–453.3"
+        ]
+      ]
+    },
+    {
+      "title": "The Second Coming",
+      "body": "Jesus Christ will return personally, visibly, and in glory. The righteous dead will be raised, and the living righteous will be changed and gathered with them to meet the Lord. We look for His coming with hope, watchfulness, and faithful service, without setting a date for His return.",
+      "refs": [
+        "John 14:1-3",
+        "Acts 1:9-11",
+        "Revelation 1:7",
+        "Matthew 24:30-31",
+        "1 Thessalonians 4:16–17",
+        "1 Corinthians 15:51–54"
+      ],
+      "egwRefs": [
+        [
+          "GC",
+          26,
+          "456.1–457.1"
+        ],
+        [
+          "GC",
+          40,
+          "640.3–645.1"
+        ]
+      ]
+    },
+    {
+      "title": "The Sanctuary",
+      "body": "Jesus ministers for us in the heavenly sanctuary on the merits of His sacrifice. His priestly ministry began after His ascension. In 1844 He entered the most holy place to begin the closing work of atonement, including the investigative judgment and the blotting out of sins. He is the Advocate of those who come to God through Him in repentance and faith.",
+      "refs": [
+        "Hebrews 8:1-5",
+        "Hebrews 9:23-24",
+        "Daniel 8:14",
+        "Revelation 14:6-7"
+      ],
+      "egwRefs": [
+        [
+          "GC",
+          23,
+          "420.2–422.1"
+        ],
+        [
+          "GC",
+          28,
+          "482.4–485.2"
+        ]
+      ]
+    },
+    {
+      "title": "The Three Angels' Messages",
+      "body": "Revelation 14:6–12 presents the everlasting gospel, announces that the hour of God’s judgment has come, calls us to worship the Creator, declares Babylon’s fall, and warns against worshiping the beast and his image or receiving his mark. These messages call for the commandments of God and the faith of Jesus. Revelation 18 adds the call for God’s people to come out of Babylon. In the final test, the issue is an informed choice between God’s commandment and enforced false worship.",
+      "refs": [
+        "Revelation 14:6-12",
+        "Revelation 18:1-4"
+      ],
+      "egwRefs": [
+        [
+          "GC",
+          20,
+          "355.1–355.3"
+        ],
+        [
+          "GC",
+          25,
+          "435.2–450.1"
+        ],
+        [
+          "GC",
+          38,
+          "603.1–605.2"
+        ]
+      ]
+    },
+    {
+      "title": "The State of the Dead",
+      "body": "Death is an unconscious sleep until the resurrection. At Christ’s return, the righteous dead will be raised to immortality. The general resurrection of the wicked takes place after the thousand years. Our hope rests in Jesus, who has conquered death.",
+      "refs": [
+        "Ecclesiastes 9:5-6",
+        "Psalm 146:4",
+        "John 11:11-14",
+        "1 Thessalonians 4:16-17",
+        "Revelation 20:4–6"
+      ],
+      "egwRefs": [
+        [
+          "GC",
+          33,
+          "545.2–550"
+        ],
+        [
+          "GC",
+          41,
+          "660.4–661.2"
+        ]
+      ]
+    },
+    {
+      "title": "Health Reform",
+      "body": "Our bodies belong to God. We seek to preserve our physical and mental powers through healthful habits and temperance, avoiding practices that harm them. Caring for health is part of our service to God and others; it does not earn salvation. We depend on Christ’s grace for a renewed heart and a life of obedience.",
+      "refs": [
+        "1 Corinthians 6:19-20",
+        "1 Corinthians 10:31",
+        "Romans 12:1-2"
+      ],
+      "egwRefs": [
+        [
+          "GC",
+          27,
+          "473.2–475.1"
+        ],
+        [
+          "SC",
+          7,
+          "59–63"
+        ]
+      ]
+    },
+    {
+      "title": "The Spirit of Prophecy",
+      "body": "We receive the writings of Ellen G. White as prophetic counsel that directs us to Jesus Christ and the Scriptures. The Bible remains the standard by which every teaching and religious experience must be tested. We encourage readers to examine each quotation in its original context.",
+      "refs": [
+        "Revelation 12:17",
+        "Revelation 19:10",
+        "Amos 3:7",
+        "Joel 2:28-29"
+      ],
+      "egwRefs": [
+        [
+          "GC",
+          37,
+          "593.1; 595.1"
+        ]
+      ]
+    }
+  ],
+  "home": {
+    "intro": "We share the everlasting gospel and the three angels’ messages with a world in need of hope. Through Bible study, preaching, and fellowship, we invite people to know Jesus, receive His grace, and prepare for His return.",
+    "mission": "Peculiar Pioneers shares the everlasting gospel and the three angels’ messages of Revelation 14. We invite people to repentance and faith in Jesus, to understand His ministry in the heavenly sanctuary, and to honor God’s commandments, including the seventh-day Sabbath. Our desire is a life transformed by His grace and ready for His return.",
+    "quote": "The Bible should never be studied without prayer.",
+    "quoteSource": "Ellen G. White · The Great Controversy, 599.3"
+  },
+  "evidenceText": {
+    "intro": "This selected chronology brings together world events from 1844 onward for historical and Bible study. The sanctuary study explains why 1844 is significant: Christ then entered the most holy place to begin the closing work of atonement. The event list is not a complete record of disasters or a statistical measure of their increase.",
+    "introQuote": "The Great Controversy describes calamities and a coming conflict over worship and God’s law. Its warning also directs us to Scripture, repentance, and Christ’s protection. Read the surrounding chapters to understand the sequence and purpose of the warning.",
+    "conclusion": [
+      "The Great Controversy warns that calamities will become more frequent and disastrous and describes the final conflict over worship. That prophetic teaching must be read in its context. A selected historical list does not, by itself, demonstrate the trend or establish that every event was individually predicted.",
+      "The final plagues follow the close of Christ’s intercession; they should not be confused with every present-day disaster. While He ministers for us, we are called to repent, trust His righteousness, obey His Word, and care for those who suffer.",
+      "The message ends in hope. Christ will deliver His people, sin and death will be destroyed, and God will make all things new. Our purpose in studying prophecy is to follow Jesus faithfully and share His saving message."
+    ],
+    "closingQuote": "The great controversy is ended. Sin and sinners are no more. The entire universe is clean."
+  }
+}

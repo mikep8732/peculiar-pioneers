@@ -4,24 +4,156 @@
     "2300 Day Prophecy",
     "Sanctuary",
     "ID'ing Christ",
-    "Current Events"
+    "Current Events",
+    "Health Reform",
+    "Sermons"
   ],
   "videos": [
+    {
+      "id": "KcMoiLOVR7w",
+      "slug": "ellen-white-diet-stimulants-battle-for-the-mind-part-2",
+      "title": "Ellen White's Prophetic Warning About Diet | Stimulants & the Battle for the Mind Pt. 2",
+      "description": "Part 2 of our study on Ellen White's prophetic warnings about diet examines stimulants, appetite, and the mind. The panel considers counsel on food and drink alongside Scripture and modern research, exploring the connection between health reform and spiritual preparation.",
+      "date": "2026-08-28",
+      "category": "Health Reform",
+      "duration": "1:48:28",
+      "series": {
+        "name": "Ellen White's Prophetic Warning About Diet",
+        "part": 2,
+        "total": 2
+      },
+      "featured": true
+    },
+    {
+      "id": "WlyDrQkQc98",
+      "slug": "ellen-white-diet-health-reform-last-days-part-1",
+      "title": "Ellen White's Prophetic Warning About Diet | Health Reform in the Last Days (Part 1)",
+      "description": "Dr. Joseph Thomas joins the panel to examine Ellen White's counsel on diet and health reform. This study explores prophecy, the testimony of Jesus, and the connection between appetite, the mind, and preparation for the last days.",
+      "date": "2026-08-14",
+      "category": "Health Reform",
+      "duration": "1:17:01",
+      "series": {
+        "name": "Ellen White's Prophetic Warning About Diet",
+        "part": 1,
+        "total": 2
+      }
+    },
+    {
+      "id": "h88OeLFcL20",
+      "slug": "gods-kindness-joseph-thomas",
+      "title": "God's Kindness | Elder Joseph Thomas",
+      "description": "Elder Joseph Thomas presents a sermon on God's kindness.",
+      "date": "2026-06-20",
+      "category": "Sermons",
+      "duration": "33:58"
+    },
+    {
+      "id": "Tp-JBGnQDF0",
+      "slug": "righteousness-by-faith-before-final-deception",
+      "title": "Righteousness by Faith Before the Final Deception | Elder Rueben Swain",
+      "description": "Elder Rueben Swain explores righteousness by faith and preparation for the final deception. Drawing from Hebrews, Revelation, and Romans, this sermon asks what it means for Christ to dwell in us as we study the closing events of Bible prophecy.",
+      "date": "2026-06-13",
+      "category": "Sermons",
+      "duration": "52:15"
+    },
+    {
+      "id": "lUHKRBlzukI",
+      "slug": "seventh-day-adventists-great-disappointment-1844",
+      "thumbnail": "https://img.youtube.com/vi/lUHKRBlzukI/hqdefault.jpg",
+      "title": "Were Seventh-Day Adventists Responsible for the Great Disappointment in 1844?",
+      "description": "This clip from our Sanctuary series examines a common misconception about William Miller and the Great Disappointment of 1844. We discuss the Christian denominations involved in the Millerite movement and the later organization of the Seventh-day Adventist Church.",
+      "date": "2025-03-12",
+      "category": "2300 Day Prophecy",
+      "duration": "3:38"
+    },
+    {
+      "id": "e1yKdYJ_Bcs",
+      "slug": "time-is-at-hand-preparing-souls-jesus-return",
+      "title": "The Time is at Hand: Preparing Souls for Jesus' Return - Sermon by Michael Porter",
+      "description": "Michael Porter explores repentance, conversion, and the call to become fishers of men. Drawing from Matthew 4:17, this sermon considers how personal transformation, compassion, and sharing present truth prepare souls for Jesus' return.",
+      "date": "2025-03-08",
+      "category": "Sermons",
+      "duration": "43:44"
+    },
+    {
+      "id": "L_VoCfmPGSs",
+      "slug": "mark-of-the-lamb-sabbath-vs-sunday-part-2",
+      "title": "The Sabbath vs. Sunday debate: The Mark of the Lamb (Part 2) - Sermon by Rueben Swain",
+      "description": "In Part 2, Rueben Swain continues the study of the Sabbath as a sign of God’s authority and the call to keep His commandments. The Great Controversy distinguishes sincere Christians who have not understood the Sabbath from the informed choice in the final conflict over enforced worship.",
+      "date": "2025-02-22",
+      "category": "Sermons",
+      "duration": "45:35",
+      "series": {
+        "name": "The Mark of the Lamb",
+        "part": 2,
+        "total": 2
+      }
+    },
+    {
+      "id": "u8DwbBhi3fg",
+      "slug": "mark-of-the-lamb-sabbath-vs-sunday-part-1",
+      "title": "The Mark of the Lamb: Sabbath vs. Sunday, A Biblical Perspective (Part 1) - Sermon by Rueben Swain",
+      "description": "Rueben Swain examines the Sabbath, God’s seal, and the mark of the beast in a study of worship and allegiance. The final test concerns an informed choice under enforced worship, after the issue has been made plain. Present Sunday observance alone is not a basis for saying that a person has received the mark of the beast.",
+      "date": "2025-02-15",
+      "category": "Sermons",
+      "duration": "34:14",
+      "series": {
+        "name": "The Mark of the Lamb",
+        "part": 1,
+        "total": 2
+      }
+    },
+    {
+      "id": "dSbxFXsfWOQ",
+      "slug": "is-jesus-christ-our-high-priest",
+      "title": "Is Jesus Christ our high Priest? - Sermon by Dr. Joseph Thomas",
+      "description": "Dr. Joseph Thomas explores Christ's role as our High Priest and the sanctuary as a witness to God's work of redemption. This sermon considers biblical testimony, the altar of witness, and how believers can reflect Christ through their character.",
+      "date": "2025-01-30",
+      "category": "Sermons",
+      "duration": "53:13"
+    },
+    {
+      "id": "XgMm8u3rans",
+      "slug": "plan-of-redemption-the-play-part-2",
+      "title": "The Plan of Redemption (The Play) Part 2 - Sermon by Rueben Swain",
+      "description": "Rueben Swain continues The Plan of Redemption with a discussion of Project 2025, economic uncertainty, civil unrest, and religious liberty. Study contemporary applications alongside the biblical prophecy of enforced worship. The existence of a political proposal does not by itself establish that the final Sunday-law test has arrived.",
+      "date": "2025-01-11",
+      "category": "Sermons",
+      "duration": "57:52",
+      "series": {
+        "name": "The Plan of Redemption (The Play)",
+        "part": 2,
+        "total": 2
+      }
+    },
+    {
+      "id": "6tzisBsI0Zw",
+      "slug": "plan-of-redemption-the-play-part-1",
+      "title": "The Plan of Redemption (The Play) - Sermon by Rueben Swain",
+      "description": "Rueben Swain explores how the sanctuary reveals God's plan of redemption. Drawing from the creation account, Psalm 77, and 2 Peter 3, this sermon considers God's timing and the importance of unity in understanding His plan.",
+      "date": "2025-01-04",
+      "category": "Sermons",
+      "duration": "1:03:51",
+      "series": {
+        "name": "The Plan of Redemption (The Play)",
+        "part": 1,
+        "total": 2
+      }
+    },
     {
       "id": "1Diq7ME6ut8",
       "slug": "revisiting-charlie-kirk-shooting-sda-church",
       "title": "Revisiting the Charlie Kirk Shooting: How This Divided the SDA Church",
-      "description": "The Charlie Kirk shooting didn't just shake the political world—it exposed a deep division inside the SDA Church. In this episode we turn to the Bible and the Spirit of Prophecy, including Ellen White's 1899 prophecy on civil war and the centralizing of wealth, to examine the shaking of God's remnant people, the close of probation, and what every believer should be doing right now.",
+      "description": "This episode discusses reactions to the Charlie Kirk shooting and questions of Christian unity, conduct, and preparation for Christ’s return. As we consider current events, we test applications by Scripture and seek a response marked by repentance, faith, and compassion. A modern event should not be presented as a specifically named EGW prediction without a source that establishes that connection.",
       "date": "2026-04-09",
       "category": "Current Events",
-      "duration": "1:37:13",
-      "featured": true
+      "duration": "1:37:13"
     },
     {
       "id": "onRTGYSJKXw",
       "slug": "three-angels-message-sanctuary-truth",
-      "title": "The Three Angels' Message & The Sanctuary Truth: (Day of Atonement Study)",
-      "description": "In this Bible study we connect the Day of Atonement to the Investigative Judgment, the heavenly sanctuary, and the Three Angels' Messages of Revelation 14. We explore why Revelation points back to God's law in the Most Holy Place, why 'Babylon is fallen' is a call to come out of false worship, and how the final conflict centers on worship, the commandments of God, and the faith of Jesus.",
+      "title": "The Three Angels’ Message & The Sanctuary Truth: (Day of Atonement Study)",
+      "description": "Connect the Day of Atonement with Christ’s ministry in the heavenly sanctuary and the three angels’ messages. Revelation 14 announces the judgment hour, calls us to worship the Creator, declares Babylon’s fall, and warns against false worship. Revelation 18 adds the call for God’s people to come out of Babylon. Our response is repentance, faith in Jesus, and obedience through His grace.",
       "date": "2026-03-03",
       "category": "Sanctuary",
       "duration": "1:20:39"
@@ -30,25 +162,25 @@
       "id": "6hYDUX1Yfjc",
       "slug": "day-of-atonement-cleansing-of-the-sanctuary",
       "title": "The Day of Atonement & the Cleansing of the Sanctuary (Bible Study)",
-      "description": "In this Bible study, we break down the Day of Atonement and the cleansing of the sanctuary—why God established it, what it reveals about sin and atonement, and how it connects to the judgment and the opening of the books. We walk through the sanctuary pattern, why atonement requires blood and a High Priest, and how Scripture shows judgment for the living and the dead.",
+      "description": "Study the Day of Atonement, the cleansing of the sanctuary, and the judgment. Christ ministers on the merits of His sacrifice and is our Advocate. The investigative judgment began in 1844 with the cases of the dead and proceeds to the living; we are not given the time when the cases of the living begin to be examined.",
       "date": "2026-02-18",
       "category": "2300 Day Prophecy",
-      "duration": "56:30"
+      "duration": "56:31"
     },
     {
       "id": "S39Czcpi6OI",
       "slug": "daniel-8-pagan-rome-papal-rome-dark-ages",
       "title": "Daniel 8: Pagan Rome to Papal Rome & The Dark Ages",
-      "description": "In this powerful continuation, we answer the question everyone asks: Is Antiochus Epiphanes the Antichrist? The Bible and history say, NO. Join our 5-person Bible study as we trace Rome through BOTH its phases (pagan and papal) and see how Scripture predicted it thousands of years in advance.",
+      "description": "Continue the study of Daniel 8 and the little horn, with attention to Rome in its pagan and papal phases. The discussion considers the proposed identification with Antiochus Epiphanes and examines the biblical and historical reasons for the ministry’s interpretation.",
       "date": "2026-01-29",
       "category": "2300 Day Prophecy",
-      "duration": "55:53"
+      "duration": "55:54"
     },
     {
       "id": "8c9Z5ri2ns8",
       "slug": "the-little-horn-power-exposed",
-      "title": "The Little Horn Power EXPOSED | Bible Prophecy Explained",
-      "description": "Who is the Little Horn in Daniel 8 and why do so many get it wrong? In this deep-dive Bible study, we examine Daniel's vision and prove why Antiochus Epiphanes is not the fulfillment.",
+      "title": "The Little Horn Power Exposed | Bible Prophecy Explained",
+      "description": "Study Daniel 8, the little horn, and the 2,300 days. This episode examines the interpretation that identifies the little horn with Rome and considers why the ministry does not identify the prophecy’s fulfillment with Antiochus Epiphanes.",
       "date": "2025-12-11",
       "category": "2300 Day Prophecy",
       "duration": "51:30"
@@ -60,7 +192,7 @@
       "description": "In this foundational study, we explore why God gave prophecy and break down Daniel 2's timeline, introducing the foundation for understanding the 2300-day prophecy.",
       "date": "2025-07-01",
       "category": "2300 Day Prophecy",
-      "duration": "48:00"
+      "duration": "1:11:20"
     },
     {
       "id": "BVzJnZ2zm5w",
@@ -78,16 +210,16 @@
       "description": "Join us as we continue our 2300-day prophecy series with an in-depth study of Daniel 8, revealing Christ as our Rock and foundation.",
       "date": "2025-09-04",
       "category": "2300 Day Prophecy",
-      "duration": "55:00"
+      "duration": "37:03"
     },
     {
       "id": "F361r8T5ijc",
       "slug": "why-is-bible-prophecy-important",
-      "title": "Special In Person Episode: Why is Bible Prophecy Important?",
+      "title": "Special In-Person Episode: Why is Bible Prophecy Important?",
       "description": "A special in-person episode exploring the importance of Bible prophecy and why understanding it matters for believers today.",
       "date": "2025-03-27",
       "category": "2300 Day Prophecy",
-      "duration": "45:00"
+      "duration": "48:20"
     },
     {
       "id": "zOtE6xNjftg",
@@ -96,7 +228,7 @@
       "description": "Part 2 of our study on the beginning of the 2300-day prophecy, continuing to unlock the prophetic timeline of Daniel.",
       "date": "2025-05-21",
       "category": "2300 Day Prophecy",
-      "duration": "50:00",
+      "duration": "1:04:59",
       "series": {
         "name": "Beginning of the 2300-Day Prophecy",
         "part": 2,
@@ -107,10 +239,10 @@
       "id": "5iZwQVCEIPU",
       "slug": "beginning-2300-day-prophecy-part-1",
       "title": "The Beginning of the 2300-Day Prophecy Explained",
-      "description": "In today's episode, we cover the first 69 weeks of the 2300-day prophecy and examine its incredible accuracy and fulfillment.",
+      "description": "Study the first sixty-nine of the seventy weeks in Daniel 9: 483 years pointing to the baptism and anointing of Jesus. The seventy weeks form the first 490 years of the longer 2,300-year period, beginning with the decree to restore Jerusalem.",
       "date": "2025-05-06",
       "category": "2300 Day Prophecy",
-      "duration": "48:00",
+      "duration": "45:38",
       "series": {
         "name": "Beginning of the 2300-Day Prophecy",
         "part": 1,
@@ -120,11 +252,11 @@
     {
       "id": "GEJKAzY7HQk",
       "slug": "70-week-prophecy",
-      "title": "The 70 Week Prophecy: What You Must Know First",
+      "title": "The 70-Week Prophecy: What You Must Know First",
       "description": "The 70 weeks of Daniel 9 explained. A crucial foundation for understanding the 2300-day prophecy.",
       "date": "2025-04-28",
       "category": "2300 Day Prophecy",
-      "duration": "52:00"
+      "duration": "22:55"
     },
     {
       "id": "SXM0oZZY__k",

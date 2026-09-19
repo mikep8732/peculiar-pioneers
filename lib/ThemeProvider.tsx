@@ -12,18 +12,18 @@ interface ThemeContextType {
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 function getInitialTheme(): Theme {
-  if (typeof window === 'undefined') return 'dark'
+  if (typeof window === 'undefined') return 'light'
   try {
-    const stored = localStorage.getItem('theme')
+    const stored = localStorage.getItem('theme-preference')
     if (stored === 'light' || stored === 'dark') return stored
   } catch {
     // localStorage not available
   }
-  return 'dark'
+  return 'light'
 }
 
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>('dark')
+  const [theme, setTheme] = useState<Theme>('light')
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
@@ -40,15 +40,16 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
     } else {
       root.classList.remove('dark')
     }
-    try {
-      localStorage.setItem('theme', theme)
-    } catch {
-      // localStorage not available
-    }
   }, [theme, mounted])
 
   const toggleTheme = () => {
-    setTheme(prev => prev === 'dark' ? 'light' : 'dark')
+    const nextTheme = theme === 'dark' ? 'light' : 'dark'
+    setTheme(nextTheme)
+    try {
+      localStorage.setItem('theme-preference', nextTheme)
+    } catch {
+      // localStorage not available
+    }
   }
 
   return (

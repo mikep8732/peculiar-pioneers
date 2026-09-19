@@ -1,44 +1,27 @@
-import type { Metadata } from 'next'
-import Navbar from '@/components/Navbar'
-import Footer from '@/components/Footer'
-import './globals.css'
-
+import type { Metadata } from "next";
+import SiteShell from "@/components/SiteShell";
+import "./globals.css";
+import "./approved.css";
+import "./native.css";
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.peculiarpioneers.com"),
   title: {
-    default: 'Peculiar Pioneers | Present Truth Ministry',
-    template: '%s | Peculiar Pioneers',
+    default: "Peculiar Pioneers | Present Truth Ministry",
+    template: "%s | Peculiar Pioneers",
   },
-  description: 'A Seventh-day Adventist present-truth ministry proclaiming the everlasting gospel for these last days.',
-}
-
+  description:
+    "A Seventh-day Adventist ministry sharing the everlasting gospel through Bible study, preaching, and fellowship.",
+};
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="" suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              try {
-                const theme = localStorage.getItem('theme');
-                if (theme === 'dark') {
-                  document.documentElement.classList.add('dark');
-                }
-              } catch {}
-            `,
-          }}
-        />
-      </head>
-      <body className="min-h-screen flex flex-col">
-        <Navbar />
-        <main className="flex-1 pt-16">
-          {children}
-        </main>
-        <Footer />
+    <html lang="en">
+      <body>
+        <SiteShell>{children}</SiteShell>
       </body>
     </html>
-  )
+  );
 }

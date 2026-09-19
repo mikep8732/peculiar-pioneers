@@ -1,167 +1,117 @@
-'use client'
-
-import { useState, useEffect, useCallback } from 'react'
-import { getLocalStorage, setLocalStorage, removeLocalStorage } from '@/lib/localStorage'
-import Button from './Button'
-
-interface FormData {
-  name: string
-  email: string
-  message: string
-  isPrayerRequest: boolean
-}
-
-const STORAGE_KEY = 'contact-form-draft'
-
+"use client";
+import { useEffect, useState } from "react";
+import { getLocalStorage, setLocalStorage } from "@/lib/localStorage";
+import Icon from "./Icon";
+type Draft = {
+  name: string;
+  email: string;
+  message: string;
+  isPrayerRequest: boolean;
+  subject?: string;
+};
 export default function ContactForm() {
-  const [formData, setFormData] = useState<FormData>({
-    name: '',
-    email: '',
-    message: '',
+  const [draft, setDraft] = useState<Draft>({
+    name: "",
+    email: "",
+    message: "",
     isPrayerRequest: false,
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-
+    subject: "A Bible question",
+  });
+  const [opened, setOpened] = useState(false);
   useEffect(() => {
-    const saved = getLocalStorage<FormData | null>(STORAGE_KEY, null)
-    if (saved) {
-      setFormData(saved)
-    }
-  }, [])
-
-  const saveDraft = useCallback((data: FormData) => {
-    setLocalStorage(STORAGE_KEY, data)
-  }, [])
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value, type } = e.target
-    const newValue = type === 'checkbox' ? (e.target as HTMLInputElement).checked : value
-
-    const newData = {
-      ...formData,
-      [name]: newValue,
-    }
-    setFormData(newData)
-    saveDraft(newData)
+    const saved = getLocalStorage<Draft | null>("contact-form-draft", null);
+    if (saved)
+      setDraft({ ...saved, subject: saved.subject || "A Bible question" });
+  }, []);
+  function update(changes: Partial<Draft>) {
+    const next = { ...draft, ...changes };
+    setDraft(next);
+    setLocalStorage("contact-form-draft", next);
+    setOpened(false);
   }
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-
-    // Create mailto link with form data
-    const subject = formData.isPrayerRequest ? 'Prayer Request' : 'Contact Form Message'
-    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    const mailtoLink = `mailto:peculiarpioneers@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`
-
-    window.location.href = mailtoLink
-
-    removeLocalStorage(STORAGE_KEY)
-    setIsSubmitting(false)
-    setIsSubmitted(true)
+  function submit(e: React.FormEvent) {
+    e.preventDefault();
+    const subject = draft.isPrayerRequest ? "Prayer request" : draft.subject;
+    const body = `Name: ${draft.name}\nReply email: ${draft.email}\n\n${draft.message}`;
+    window.location.href = `mailto:peculiarpioneers@gmail.com?subject=${encodeURIComponent(subject || "Website inquiry")}&body=${encodeURIComponent(body)}`;
+    setOpened(true);
   }
-
-  if (isSubmitted) {
-    return (
-      <div className="text-center py-12">
-        <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-gold/10 text-gold mb-6">
-          <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-          </svg>
-        </div>
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-          Message Sent
-        </h3>
-        <p className="text-gray-600 dark:text-gray-400">
-          Thank you for reaching out. We will get back to you soon.
-        </p>
-      </div>
-    )
-  }
-
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      <div>
-        <label
-          htmlFor="name"
-          className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-        >
-          Name
+    <form className="ppx-contact-form" onSubmit={submit}>
+      <div className="ppx-form-row">
+        <label>
+          Your name
+          <input
+            name="name"
+            autoComplete="name"
+            required
+            value={draft.name}
+            onChange={(e) => update({ name: e.target.value })}
+          />
         </label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark-200 text-gray-900 dark:text-white focus:ring-2 focus:ring-gold focus:border-transparent transition-colors"
-        />
-      </div>
-
-      <div>
-        <label
-          htmlFor="email"
-          className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
-        >
-          Email
+        <label>
+          Email address
+          <input
+            name="email"
+            type="email"
+            autoComplete="email"
+            required
+            value={draft.email}
+            onChange={(e) => update({ email: e.target.value })}
+          />
         </label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark-200 text-gray-900 dark:text-white focus:ring-2 focus:ring-gold focus:border-transparent transition-colors"
-        />
       </div>
-
-      <div>
-        <label
-          htmlFor="message"
-          className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2"
+      <label>
+        I’m reaching out about
+        <select
+          name="subject"
+          value={draft.subject}
+          onChange={(e) => update({ subject: e.target.value })}
         >
-          Message
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          required
-          rows={5}
-          className="w-full px-4 py-3 rounded-lg border border-gray-300 dark:border-gray-700 bg-white dark:bg-dark-200 text-gray-900 dark:text-white focus:ring-2 focus:ring-gold focus:border-transparent transition-colors resize-none"
-        />
-      </div>
-
-      <div className="flex items-center gap-3">
+          {[
+            "A Bible question",
+            "The ministry",
+            "The coming Bible app",
+            "Supporting the ministry",
+            "Something else",
+          ].map((s) => (
+            <option key={s}>{s}</option>
+          ))}
+        </select>
+      </label>
+      <label className="ppx-prayer-choice">
         <input
+          name="prayer"
           type="checkbox"
-          id="isPrayerRequest"
-          name="isPrayerRequest"
-          checked={formData.isPrayerRequest}
-          onChange={handleChange}
-          className="w-5 h-5 rounded border-gray-300 dark:border-gray-700 text-gold focus:ring-gold"
+          checked={draft.isPrayerRequest}
+          onChange={(e) => update({ isPrayerRequest: e.target.checked })}
         />
-        <label
-          htmlFor="isPrayerRequest"
-          className="text-sm text-gray-700 dark:text-gray-300"
-        >
-          This is a prayer request
-        </label>
-      </div>
-
-      <Button type="submit" variant="primary" className="w-full">
-        {isSubmitting ? 'Sending...' : 'Send Message'}
-      </Button>
-
-      <p className="text-xs text-gray-500 dark:text-gray-500 text-center">
-        Your message is saved as a draft automatically.
+        This is a prayer request
+      </label>
+      <label>
+        Your message
+        <textarea
+          name="message"
+          required
+          value={draft.message}
+          onChange={(e) => update({ message: e.target.value })}
+        />
+      </label>
+      <button type="submit" className="ppx-action ppx-action-dark">
+        Open email app <Icon name="arrow-up-right" />
+      </button>
+      <p className="ppx-source-note">
+        This opens your email app with a prepared message. Review it and press
+        Send there. This website does not send email. Your draft stays in this
+        browser.
       </p>
+      {opened && (
+        <p className="ppx-form-feedback" role="status">
+          Your email app was requested. Your message has not been sent by this
+          website. If no app opened, email peculiarpioneers@gmail.com directly;
+          your draft is still here.
+        </p>
+      )}
     </form>
-  )
+  );
 }
