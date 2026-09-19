@@ -41,9 +41,6 @@ export default function SiteShell({ children }: { children: React.ReactNode }) {
               href="/"
               aria-label="Peculiar Pioneers home"
             >
-              <span className="ppx-brand-symbol">
-                <Icon name="book-open" />
-              </span>
               <span>
                 peculiar
                 <br />

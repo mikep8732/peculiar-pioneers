@@ -439,13 +439,31 @@ body {
     --ppx-home-content-width: 100%;
   }
 }
-/* Keep navigation inside the navy half before the desktop links have room. */
-@media (min-width: 681px) and (max-width: 820px) {
-  #pp-site[data-page="home"] .ppx-nav {
+/* Shared header: compact wordmark, balanced gutters and grouped navigation. */
+#pp-site .ppx-header {
+  padding-inline: clamp(20px, 3.333333cqw, 48px);
+}
+#pp-site .ppx-header > .ppx-brand {
+  gap: 0;
+  flex-shrink: 0;
+}
+#pp-site .ppx-header > .ppx-nav {
+  margin-inline-start: auto;
+  flex-shrink: 0;
+}
+#pp-site .ppx-header > .ppx-menu {
+  margin-inline-start: auto;
+}
+@container (max-width: 900px) {
+  #pp-site .ppx-header > .ppx-nav {
     display: none;
   }
-  #pp-site[data-page="home"] .ppx-menu {
+  #pp-site .ppx-header > .ppx-menu {
     display: flex;
+  }
+}
+@container (min-width: 681px) and (max-width: 900px) {
+  #pp-site[data-page="home"] .ppx-menu[aria-expanded="false"] {
     color: var(--ppx-paper);
   }
 }
