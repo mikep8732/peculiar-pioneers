@@ -1,29 +1,34 @@
-import type { Metadata } from 'next'
-import { getAllVideos, getFeaturedVideo } from '@/lib/videos'
-import FeaturedEpisode from '@/components/FeaturedEpisode'
-import EpisodeArchive from '@/components/EpisodeArchive'
-
-export const metadata: Metadata = {
-  title: 'Watch',
-  description: 'Watch sermons, Bible studies, and podcasts from Peculiar Pioneers proclaiming present truth for these last days.',
-}
-
-export default function Watch() {
-  const videos = getAllVideos()
-  const featuredVideo = getFeaturedVideo()
-
+import type { Metadata } from "next";
+import { getAllVideos } from "@/lib/videos";
+import PageIntro from "@/components/PageIntro";
+import EpisodeArchive from "@/components/EpisodeArchive";
+export const metadata: Metadata = { title: "Watch Bible Studies" };
+export default async function Watch({
+  searchParams,
+}: {
+  searchParams: Promise<{ category?: string | string[] }>;
+}) {
+  const query = await searchParams;
+  const category =
+    typeof query.category === "string" ? query.category : undefined;
   return (
-    <div className="py-12 md:py-16">
-      <div className="max-w-6xl mx-auto px-6">
-        {featuredVideo && (
-          <FeaturedEpisode video={featuredVideo} />
-        )}
-
-        <EpisodeArchive
-          videos={videos}
-          featuredSlug={featuredVideo?.slug}
-        />
-      </div>
-    </div>
-  )
+    <>
+      <PageIntro
+        kicker="Watch & listen"
+        title={
+          <>
+            Make room for
+            <br />a deeper study.
+          </>
+        }
+      >
+        Bible studies, sermons, and conversations to help you grow in the Word.
+      </PageIntro>
+      <EpisodeArchive
+        key={category}
+        videos={getAllVideos()}
+        initialCategory={category}
+      />
+    </>
+  );
 }

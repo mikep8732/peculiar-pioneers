@@ -1,69 +1,79 @@
-'use client'
+"use client";
 
-import { useState, useCallback } from 'react'
-import type { Flashcard as FlashcardType } from '@/lib/quiz'
-import Flashcard from './Flashcard'
+import { useState } from "react";
+import type { Flashcard as FlashcardType } from "@/lib/quiz";
+import Flashcard from "./Flashcard";
 
 interface FlashcardDeckProps {
-  cards: FlashcardType[]
-  onComplete?: (knownCards: string[], reviewCards: string[]) => void
+  cards: FlashcardType[];
+  onComplete?: (knownCards: string[], reviewCards: string[]) => void;
 }
 
-export default function FlashcardDeck({ cards, onComplete }: FlashcardDeckProps) {
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [knownCards, setKnownCards] = useState<string[]>([])
-  const [reviewCards, setReviewCards] = useState<string[]>([])
-  const [isComplete, setIsComplete] = useState(false)
+export default function FlashcardDeck({
+  cards,
+  onComplete,
+}: FlashcardDeckProps) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [knownCards, setKnownCards] = useState<string[]>([]);
+  const [reviewCards, setReviewCards] = useState<string[]>([]);
+  const [isComplete, setIsComplete] = useState(false);
 
-  const currentCard = cards[currentIndex]
-  const progress = ((currentIndex + 1) / cards.length) * 100
+  const [activeCards, setActiveCards] = useState(cards);
+  const currentCard = activeCards[currentIndex];
+  const progress = ((currentIndex + 1) / activeCards.length) * 100;
 
-  const goToNext = useCallback(() => {
-    if (currentIndex < cards.length - 1) {
-      setCurrentIndex(prev => prev + 1)
+  const recordCard = (known: boolean) => {
+    const nextKnown = known
+      ? Array.from(new Set([...knownCards, currentCard.id]))
+      : knownCards.filter((id) => id !== currentCard.id);
+    const nextReview = known
+      ? reviewCards.filter((id) => id !== currentCard.id)
+      : Array.from(new Set([...reviewCards, currentCard.id]));
+    setKnownCards(nextKnown);
+    setReviewCards(nextReview);
+    if (currentIndex < activeCards.length - 1) {
+      setCurrentIndex(currentIndex + 1);
     } else {
-      setIsComplete(true)
-      onComplete?.(knownCards, reviewCards)
+      setIsComplete(true);
+      onComplete?.(nextKnown, nextReview);
     }
-  }, [currentIndex, cards.length, knownCards, reviewCards, onComplete])
-
-  const handleKnown = useCallback(() => {
-    setKnownCards(prev => [...prev, currentCard.id])
-    goToNext()
-  }, [currentCard?.id, goToNext])
-
-  const handleReview = useCallback(() => {
-    setReviewCards(prev => [...prev, currentCard.id])
-    goToNext()
-  }, [currentCard?.id, goToNext])
-
+  };
+  const handleKnown = () => recordCard(true);
+  const handleReview = () => recordCard(false);
   const handleRestart = () => {
-    setCurrentIndex(0)
-    setKnownCards([])
-    setReviewCards([])
-    setIsComplete(false)
-  }
-
+    setActiveCards(cards);
+    setCurrentIndex(0);
+    setKnownCards([]);
+    setReviewCards([]);
+    setIsComplete(false);
+  };
   const handleReviewOnly = () => {
-    // Filter cards to only review ones
-    const reviewCardObjects = cards.filter(c => reviewCards.includes(c.id))
-    if (reviewCardObjects.length > 0) {
-      setCurrentIndex(0)
-      setKnownCards([])
-      setReviewCards([])
-      setIsComplete(false)
-      // Note: In a full implementation, you'd pass the filtered cards
+    const remaining = cards.filter((c) => reviewCards.includes(c.id));
+    if (remaining.length) {
+      setActiveCards(remaining);
+      setCurrentIndex(0);
+      setIsComplete(false);
     }
-  }
+  };
 
   if (isComplete) {
-    const knownPercent = Math.round((knownCards.length / cards.length) * 100)
+    const knownPercent = Math.round((knownCards.length / cards.length) * 100);
 
     return (
       <div className="text-center py-8">
         <div className="w-16 h-16 rounded-full bg-gold/10 text-gold flex items-center justify-center mx-auto mb-4">
-          <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+          <svg
+            className="w-8 h-8"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2}
+              d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+            />
           </svg>
         </div>
 
@@ -72,8 +82,11 @@ export default function FlashcardDeck({ cards, onComplete }: FlashcardDeckProps)
         </h3>
 
         <p className="text-gray-600 dark:text-gray-400 mb-6">
-          You marked <span className="font-semibold text-gold">{knownCards.length}</span> cards as known
-          and <span className="font-semibold">{reviewCards.length}</span> for review.
+          You marked{" "}
+          <span className="font-semibold text-gold">{knownCards.length}</span>{" "}
+          cards as known and{" "}
+          <span className="font-semibold">{reviewCards.length}</span> for
+          review.
         </p>
 
         {/* Results summary */}
@@ -107,7 +120,7 @@ export default function FlashcardDeck({ cards, onComplete }: FlashcardDeckProps)
           </button>
         </div>
       </div>
-    )
+    );
   }
 
   return (
@@ -115,7 +128,9 @@ export default function FlashcardDeck({ cards, onComplete }: FlashcardDeckProps)
       {/* Progress bar */}
       <div className="mb-6">
         <div className="flex justify-between text-sm text-gray-500 dark:text-gray-400 mb-2">
-          <span>Card {currentIndex + 1} of {cards.length}</span>
+          <span>
+            Card {currentIndex + 1} of {activeCards.length}
+          </span>
           <span>{Math.round(progress)}%</span>
         </div>
         <div className="h-2 bg-gray-200 dark:bg-dark-200 rounded-full overflow-hidden">
@@ -128,6 +143,7 @@ export default function FlashcardDeck({ cards, onComplete }: FlashcardDeckProps)
 
       {/* Current card */}
       <Flashcard
+        key={currentCard.id}
         card={currentCard}
         onKnown={handleKnown}
         onReview={handleReview}
@@ -135,17 +151,17 @@ export default function FlashcardDeck({ cards, onComplete }: FlashcardDeckProps)
 
       {/* Navigation dots */}
       <div className="flex justify-center gap-1.5 mt-6">
-        {cards.map((card, index) => (
+        {activeCards.map((card, index) => (
           <div
             key={card.id}
             className={`w-2 h-2 rounded-full transition-colors ${
               index === currentIndex
-                ? 'bg-gold'
+                ? "bg-gold"
                 : knownCards.includes(card.id)
-                ? 'bg-green-500'
-                : reviewCards.includes(card.id)
-                ? 'bg-orange-500'
-                : 'bg-gray-300 dark:bg-gray-600'
+                  ? "bg-green-500"
+                  : reviewCards.includes(card.id)
+                    ? "bg-orange-500"
+                    : "bg-gray-300 dark:bg-gray-600"
             }`}
           />
         ))}
@@ -154,12 +170,12 @@ export default function FlashcardDeck({ cards, onComplete }: FlashcardDeckProps)
       {/* Skip option */}
       <div className="text-center mt-4">
         <button
-          onClick={goToNext}
+          onClick={handleReview}
           className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
         >
-          Skip this card
+          Review this card later
         </button>
       </div>
     </div>
-  )
+  );
 }

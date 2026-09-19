@@ -1,0 +1,12 @@
+design-reference/
+PDFs/
+.claude/
+.next/
+node_modules/
+.env*
+*.pem
+.git/
+.vercel/
+.codex/
+.agents/
+.DS_Store

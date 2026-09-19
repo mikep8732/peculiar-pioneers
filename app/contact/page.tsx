@@ -1,32 +1,34 @@
-import type { Metadata } from 'next'
-import ContactForm from '@/components/ContactForm'
-
-export const metadata: Metadata = {
-  title: 'Contact',
-  description: 'Get in touch with Peculiar Pioneers or submit a prayer request.',
-}
-
+import type { Metadata } from "next";
+import PageIntro from "@/components/PageIntro";
+import ContactForm from "@/components/ContactForm";
+import Icon from "@/components/Icon";
+export const metadata: Metadata = { title: "Contact & Prayer" };
 export default function Contact() {
   return (
-    <div className="section">
-      <div className="container-narrow">
-        <div className="text-center mb-16">
-          <h1 className="text-gray-900 dark:text-white mb-4">Contact Us</h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-4">
-            Have a question or want to connect? Send us a message below, or submit a prayer request.
+    <>
+      <PageIntro kicker="Connect with the ministry" title="Contact Us">
+        Have a question or a prayer request? Prepare an email below, or contact
+        us directly.
+      </PageIntro>
+      <section className="ppx-section ppx-contact-layout">
+        <div>
+          <div className="ppx-kicker">Get in touch</div>
+          <h2>What’s on your heart?</h2>
+          <p>
+            Have a question about a study, a prayer request, or something you’d
+            like to share? We’d love to hear from you.
           </p>
-          <a
-            href="mailto:peculiarpioneers@gmail.com"
-            className="text-gold hover:text-gold-400 font-medium transition-colors"
-          >
+          <a className="ppx-email" href="mailto:peculiarpioneers@gmail.com">
             peculiarpioneers@gmail.com
           </a>
+          <div className="ppx-scripture-panel contact-quote">
+            <Icon name="heart-handshake" />
+            <blockquote>“Pray one for another…”</blockquote>
+            <cite>James 5:16 · KJV excerpt</cite>
+          </div>
         </div>
-
-        <div className="max-w-xl mx-auto">
-          <ContactForm />
-        </div>
-      </div>
-    </div>
-  )
+        <ContactForm />
+      </section>
+    </>
+  );
 }

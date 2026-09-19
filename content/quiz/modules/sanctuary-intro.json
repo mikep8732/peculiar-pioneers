@@ -9,14 +9,18 @@
       "id": "reading-1",
       "type": "reading",
       "title": "Why Study the Sanctuary?",
-      "content": "The sanctuary is not merely an ancient relic of Israel's history—it is a living revelation of God's plan to save humanity. When God instructed Moses to build the sanctuary, He said, \"Let them make me a sanctuary; that I may dwell among them\" (Exodus 25:8).\n\nThis was God's desire from the beginning: to dwell with His people. Sin had separated humanity from their Creator, but through the sanctuary service, God revealed how that separation would be healed.\n\nThe sanctuary message became especially significant after October 22, 1844. As early Adventist pioneers studied Scripture, they discovered that the sanctuary held the key to understanding Christ's ongoing ministry in heaven. Ellen G. White wrote that the subject of the sanctuary \"was the key which unlocked the mystery of the disappointment of 1844. It opened to view a complete system of truth, connected and harmonious.\"",
+      "content": "God told Moses, “And let them make me a sanctuary; that I may dwell among them.” (Exodus 25:8, KJV). The earthly sanctuary and its services pointed to Christ and His work for our salvation.\n\nJesus gave His life for us and now ministers as our High Priest in heaven. In 1844 He entered the most holy place to begin the closing work of atonement. Understanding the heavenly sanctuary explains the event at the end of the 2,300 years; Christ’s visible return remains future.\n\nWe come to Him in repentance and faith, relying on His righteousness and His power to change our hearts. See The Great Controversy, 413–422; 423.1–424.1; 482.4–484.2; and Steps to Christ, 59–63.",
       "keyPoints": [
         "God's desire is to dwell among His people",
         "The sanctuary reveals God's plan to heal the separation caused by sin",
         "The sanctuary message explains the significance of 1844",
         "It reveals Christ's ongoing heavenly ministry"
       ],
-      "scriptureReferences": ["Exodus 25:8", "Hebrews 8:1-2", "Hebrews 9:24"]
+      "scriptureReferences": [
+        "Exodus 25:8",
+        "Hebrews 8:1-2",
+        "Hebrews 9:24"
+      ]
     },
     {
       "id": "flashcards-1",
@@ -33,12 +37,12 @@
           "id": "fc-2",
           "front": "What event did the sanctuary message help explain?",
           "back": "The disappointment of 1844",
-          "hint": "Think about the Millerite movement"
+          "hint": "Think about October 22, 1844."
         },
         {
           "id": "fc-3",
           "front": "What did Ellen G. White call the sanctuary subject?",
-          "back": "The key which unlocked the mystery of the disappointment of 1844"
+          "back": "“The key which unlocked the mystery of the disappointment of 1844.” — The Great Controversy, 423.1 (excerpt; initial capitalization adjusted)."
         },
         {
           "id": "fc-4",
@@ -64,13 +68,13 @@
           "type": "multiple-choice",
           "question": "According to Exodus 25:8, what was God's purpose in having a sanctuary built?",
           "options": [
-            "To receive animal sacrifices",
+            "To display Israel’s wealth",
             "To dwell among His people",
-            "To store the tablets of the law",
+            "To replace obedience to God",
             "To provide employment for the Levites"
           ],
           "correctAnswer": 1,
-          "explanation": "God said, 'Let them make me a sanctuary; that I may dwell among them' (Exodus 25:8). God's primary purpose was relational—He wanted to be near His people.",
+          "explanation": "God said, “And let them make me a sanctuary; that I may dwell among them.” (Exodus 25:8, KJV). The verse states His purpose plainly: to dwell among His people.",
           "scriptureRef": "Exodus 25:8"
         },
         {
@@ -92,14 +96,16 @@
             "The founding of America"
           ],
           "correctAnswer": 2,
-          "explanation": "The sanctuary message was 'the key which unlocked the mystery of the disappointment of 1844,' helping Adventists understand what actually happened on that date."
+          "explanation": "The Great Controversy, 423.1–424.1, explains that understanding the heavenly sanctuary resolved the misunderstanding about the event in 1844. Christ entered the most holy place; He did not return to earth on that date."
         },
         {
           "id": "q4",
           "type": "fill-blank",
-          "question": "According to Hebrews 8:2, Christ is a minister of the sanctuary and of the true ___ which the Lord pitched.",
+          "question": "In Hebrews 8:2 (KJV), fill in the exact word: Christ is a minister of the sanctuary and of the true ___ which the Lord pitched.",
           "correctAnswer": "tabernacle",
-          "acceptedAnswers": ["tabernacle", "tent"],
+          "acceptedAnswers": [
+            "tabernacle"
+          ],
           "explanation": "Hebrews 8:2 describes Christ as 'a minister of the sanctuary, and of the true tabernacle, which the Lord pitched, and not man.'",
           "scriptureRef": "Hebrews 8:2"
         },

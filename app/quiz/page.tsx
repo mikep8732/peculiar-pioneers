@@ -1,72 +1,133 @@
-import type { Metadata } from 'next'
-import QuizHub from '@/components/quiz/QuizHub'
-import { getAllPaths } from '@/lib/quiz'
-
-export const metadata: Metadata = {
-  title: 'Study Center | Peculiar Pioneers',
-  description: 'Interactive Bible study courses on Sanctuary, Prophecy, Sabbath, and Last Day Events. Deepen your understanding of present truth.',
-}
-
-export default function QuizPage() {
-  const paths = getAllPaths()
-
+import type { Metadata } from "next";
+import Link from "next/link";
+import { studyData } from "@/lib/studies";
+import PageIntro from "@/components/PageIntro";
+import Icon from "@/components/Icon";
+export const metadata: Metadata = { title: "Bible Study & Flashcards" };
+export default function Studies() {
   return (
-    <main className="py-12 md:py-16">
-      <div className="max-w-6xl mx-auto px-6">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Study Center
-          </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Deepen your understanding of present truth through interactive learning paths.
-            Study at your own pace with readings, flashcards, and quizzes.
+    <>
+      <PageIntro
+        kicker="Bible study & flashcards"
+        title={
+          <>
+            Choose a study.
+            <br />
+            Grow in the Word.
+          </>
+        }
+      >
+        Follow one subject from Scripture into reflection, recall, and
+        understanding. Begin wherever your questions lead.
+      </PageIntro>
+      <section className="ppx-section ppx-study-catalog">
+        <div className="ppx-study-welcome">
+          {[
+            ["book-open", "Read & reflect", "Understand seven key truths."],
+            ["layers", "Flashcards", "Recall them in your own words."],
+            ["circle-help", "Check understanding", "Learn from each answer."],
+          ].map(([icon, title, text]) => (
+            <div key={title}>
+              <Icon name={icon} />
+              <strong>{title}</strong>
+              <span>{text}</span>
+            </div>
+          ))}
+        </div>
+        <p className="ppx-source-note">
+          KJV Scripture · Explanations drawn from Ellen G. White’s writings.
+          Open the references to read each passage in context.
+        </p>
+        {studyData.groups.map((group) => (
+          <section key={group} className="ppx-study-group">
+            <div className="ppx-section-head">
+              <h2>{group}</h2>
+            </div>
+            <div className="ppx-topic-grid">
+              {studyData.topics
+                .filter((t) => t.group === group)
+                .map((t) => (
+                  <Link
+                    key={t.id}
+                    href={`/quiz/${t.id}`}
+                    className="ppx-topic-tile ppx-study-topic"
+                  >
+                    <Icon name={t.icon} />
+                    <span>
+                      <strong>{t.title}</strong>
+                      <small>{t.description}</small>
+                      <span className="ppx-topic-counts">
+                        7 readings · 7 cards · 7 questions
+                      </span>
+                    </span>
+                    <Icon name="arrow-up-right" />
+                  </Link>
+                ))}
+            </div>
+          </section>
+        ))}
+        <div className="ppx-study-more">
+          <div>
+            <div className="ppx-kicker">Go deeper</div>
+            <h2>1844 &amp; the Sanctuary</h2>
+            <p>
+              Continue with the dedicated study of Daniel’s prophecy and
+              Christ’s heavenly ministry.
+            </p>
+          </div>
+          <Link className="ppx-action ppx-action-primary" href="/prophecy/1844">
+            Open the 1844 study <Icon name="arrow-up-right" />
+          </Link>
+        </div>
+        <p className="study-progress-note">
+          Your progress is saved in this browser when storage is available. It
+          does not sync between devices. Your saved progress in the original
+          sanctuary introduction is retained.
+        </p>
+        <div className="ppx-actions">
+          <Link
+            className="ppx-action"
+            href="/quiz/sanctuary-foundations/sanctuary-intro"
+          >
+            Continue the original sanctuary introduction
+          </Link>
+          <Link className="ppx-action" href="/watch">
+            Watch the video studies
+          </Link>
+          <Link className="ppx-action" href="/beliefs">
+            Explore our beliefs
+          </Link>
+        </div>
+      </section>
+      <section className="ppx-app-band">
+        <div>
+          <div className="ppx-kicker">In development</div>
+          <h2>
+            Bible app.
+            <br />
+            Coming soon.
+          </h2>
+          <p>
+            We’re developing a Bible app to help you study more deeply. Our hope
+            is that it will also help sustain the ministry and grow our ability
+            to serve families in need.
           </p>
+          <Link className="ppx-text-link" href="/bible-app">
+            Discover the vision <Icon name="arrow-up-right" />
+          </Link>
         </div>
-
-        {/* How it works */}
-        <div className="grid md:grid-cols-3 gap-6 mb-12">
-          <div className="text-center p-6">
-            <div className="w-12 h-12 rounded-full bg-gold/10 text-gold flex items-center justify-center mx-auto mb-4">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
-              </svg>
-            </div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Read & Learn</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Study key concepts with scripture references and highlighted insights
-            </p>
-          </div>
-          <div className="text-center p-6">
-            <div className="w-12 h-12 rounded-full bg-gold/10 text-gold flex items-center justify-center mx-auto mb-4">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 21h10a2 2 0 002-2V9.414a1 1 0 00-.293-.707l-5.414-5.414A1 1 0 0012.586 3H7a2 2 0 00-2 2v14a2 2 0 002 2z" />
-              </svg>
-            </div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Review with Flashcards</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Reinforce your learning with interactive flip cards
-            </p>
-          </div>
-          <div className="text-center p-6">
-            <div className="w-12 h-12 rounded-full bg-gold/10 text-gold flex items-center justify-center mx-auto mb-4">
-              <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-            </div>
-            <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Test Your Knowledge</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Take quizzes to confirm understanding before moving forward
-            </p>
+        <div className="ppx-app-book">
+          <Icon name="book-open" />
+          <div>
+            <strong>
+              Study with
+              <br />
+              purpose.
+            </strong>
+            <small>Peculiar Pioneers</small>
           </div>
         </div>
-
-        {/* Divider */}
-        <div className="border-t border-gray-200 dark:border-gray-800 mb-12" />
-
-        {/* Learning paths */}
-        <QuizHub paths={paths} />
-      </div>
-    </main>
-  )
+      </section>
+    </>
+  );
 }

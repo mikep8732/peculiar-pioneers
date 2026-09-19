@@ -1,570 +1,805 @@
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: '1844 Prophecy - Karaite Calendar',
-  description: 'Understanding the calendar calculations behind October 22, 1844 and the 2,300-day prophecy of Daniel.',
-}
-
-export default function Prophecy1844() {
+import type { Metadata } from "next";
+import Link from "next/link";
+import Icon from "@/components/Icon";
+export const metadata: Metadata = { title: "1844 & the Sanctuary" };
+export default function Page() {
   return (
-    <div className="section">
-      <div className="container-narrow">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h1 className="text-gray-900 dark:text-white mb-4">
-            Karaite Jewish Calendar vs. Gregorian Calendar
-          </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-300 italic">
-            A presentation on the calendar calculations behind October 22, 1844
-          </p>
-        </div>
-
-        {/* Calendar Comparison - Months 1-6 */}
-        <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white text-center mb-2">
-            Calendar Comparison
-          </h2>
-          <h3 className="text-lg text-gray-600 dark:text-gray-400 text-center mb-8">
-            Months 1-6 (Spring & Summer 1844)
-          </h3>
-
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse text-sm md:text-base">
-              <thead>
-                <tr className="bg-gray-100 dark:bg-dark-200">
-                  <th className="border border-gray-200 dark:border-gray-700 px-4 py-3 text-left font-semibold text-gray-900 dark:text-white">Karaite Month</th>
-                  <th className="border border-gray-200 dark:border-gray-700 px-4 py-3 text-left font-semibold text-gray-900 dark:text-white">Hebrew Name</th>
-                  <th className="border border-gray-200 dark:border-gray-700 px-4 py-3 text-left font-semibold text-gray-900 dark:text-white">Gregorian Dates (1844)</th>
-                  <th className="border border-gray-200 dark:border-gray-700 px-4 py-3 text-left font-semibold text-gray-900 dark:text-white">Notable Dates</th>
-                </tr>
-              </thead>
-              <tbody className="text-gray-700 dark:text-gray-300">
-                <tr className="bg-white dark:bg-dark-100">
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">1st Month</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">Nisan/Aviv</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">April 19 - May 18</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3 text-gold font-semibold">Passover (Pesach): April 19</td>
-                </tr>
-                <tr className="bg-gray-50 dark:bg-dark-200">
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">2nd Month</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">Iyar</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">May 19 - June 16</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3"></td>
-                </tr>
-                <tr className="bg-white dark:bg-dark-100">
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">3rd Month</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">Sivan</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">June 17 - July 16</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3 text-gold font-semibold">Shavuot (Pentecost): June 17</td>
-                </tr>
-                <tr className="bg-gray-50 dark:bg-dark-200">
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">4th Month</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">Tammuz</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">July 17 - August 15</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3"></td>
-                </tr>
-                <tr className="bg-white dark:bg-dark-100">
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">5th Month</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">Av</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">August 16 - September 13</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3"></td>
-                </tr>
-                <tr className="bg-gray-50 dark:bg-dark-200">
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">6th Month</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">Elul</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">September 14 - October 12</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div className="flex justify-center mt-8">
-            <div className="bg-gray-100 dark:bg-dark-200 border border-gray-200 dark:border-gray-700 rounded-xl p-6 text-center">
-              <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">SPRING</p>
-              <p className="text-3xl font-bold text-gold">1-6</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">MONTHS</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Calendar Comparison - Months 7-12 */}
-        <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white text-center mb-2">
-            Calendar Comparison
-          </h2>
-          <h3 className="text-lg text-gray-600 dark:text-gray-400 text-center mb-8">
-            Months 7-12 (Fall & Winter 1844-1845)
-          </h3>
-
-          <div className="overflow-x-auto">
-            <table className="w-full border-collapse text-sm md:text-base">
-              <thead>
-                <tr className="bg-gray-100 dark:bg-dark-200">
-                  <th className="border border-gray-200 dark:border-gray-700 px-4 py-3 text-left font-semibold text-gray-900 dark:text-white">Karaite Month</th>
-                  <th className="border border-gray-200 dark:border-gray-700 px-4 py-3 text-left font-semibold text-gray-900 dark:text-white">Hebrew Name</th>
-                  <th className="border border-gray-200 dark:border-gray-700 px-4 py-3 text-left font-semibold text-gray-900 dark:text-white">Gregorian Dates (1844)</th>
-                  <th className="border border-gray-200 dark:border-gray-700 px-4 py-3 text-left font-semibold text-gray-900 dark:text-white">Notable Dates</th>
-                </tr>
-              </thead>
-              <tbody className="text-gray-700 dark:text-gray-300">
-                <tr className="bg-white dark:bg-dark-100">
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">7th Month</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">Tishri</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">October 13 - November 11</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3 text-gold font-semibold">Yom Kippur (Day of Atonement): October 22</td>
-                </tr>
-                <tr className="bg-gray-50 dark:bg-dark-200">
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">8th Month</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">Cheshvan</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">November 12 - December 11</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3"></td>
-                </tr>
-                <tr className="bg-white dark:bg-dark-100">
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">9th Month</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">Kislev</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">December 12 - January 10, 1845</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3"></td>
-                </tr>
-                <tr className="bg-gray-50 dark:bg-dark-200">
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">10th Month</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">Tevet</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">January 11 - February 8, 1845</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3"></td>
-                </tr>
-                <tr className="bg-white dark:bg-dark-100">
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">11th Month</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">Shevat</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">February 9 - March 10, 1845</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3"></td>
-                </tr>
-                <tr className="bg-gray-50 dark:bg-dark-200">
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">12th Month</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">Adar</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3">March 11 - April 8, 1845</td>
-                  <td className="border border-gray-200 dark:border-gray-700 px-4 py-3"></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-
-          <div className="flex justify-center mt-8">
-            <div className="bg-gray-100 dark:bg-dark-200 border border-gray-200 dark:border-gray-700 rounded-xl p-6 text-center">
-              <p className="text-sm text-gray-500 dark:text-gray-400 mb-1">FALL</p>
-              <p className="text-3xl font-bold text-blue-500">7-12</p>
-              <p className="text-sm text-gray-600 dark:text-gray-400">MONTHS</p>
-            </div>
-          </div>
-        </section>
-
-        {/* The Significant Date */}
-        <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white text-center mb-8">
-            The Significant Date: October 22, 1844
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <div className="bg-gold/10 border-l-4 border-gold p-6 rounded-r-xl">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white text-center mb-2">
-                Karaite Jewish Calendar
-              </h3>
-              <p className="text-center text-gray-700 dark:text-gray-300">
-                10th of Tishri<br />
-                Day of Atonement (Yom Kippur)
-              </p>
-            </div>
-            <div className="bg-gold/10 border-l-4 border-gold p-6 rounded-r-xl">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-white text-center mb-2">
-                Gregorian Calendar
-              </h3>
-              <p className="text-center text-gray-700 dark:text-gray-300">
-                October 22, 1844<br />
-                Tuesday
-              </p>
-            </div>
-          </div>
-
-          <div className="flex justify-center mb-8">
-            <div className="border-2 border-gold rounded-xl p-6 text-center">
-              <p className="text-gray-600 dark:text-gray-400 text-sm">OCT 1844</p>
-              <p className="text-5xl font-bold text-gold">22</p>
-              <p className="text-gray-600 dark:text-gray-400 text-sm">TUESDAY</p>
-            </div>
-          </div>
-
-          <div className="bg-gray-50 dark:bg-dark-200 border-l-4 border-gold p-6 rounded-r-xl">
-            <p className="text-center text-gray-700 dark:text-gray-300">
-              This date was calculated by the Millerites as the conclusion of the 2,300 day prophecy from Daniel 8:14, interpreted as years starting from 457 BCE.
-            </p>
-          </div>
-        </section>
-
-        {/* Karaite Calendar Determination */}
-        <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white text-center mb-8">
-            Karaite Calendar Determination
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Key Principles</h3>
-              <div className="bg-gray-50 dark:bg-dark-200 rounded-xl p-6">
-                <ul className="space-y-2 text-gray-700 dark:text-gray-300 list-disc list-inside">
-                  <li>Based on lunar observation</li>
-                  <li>New month begins with first sighting of new moon</li>
-                  <li>First month determined by ripening barley (Aviv) in Israel</li>
-                  <li>No fixed mathematical calculations like the Rabbinic calendar</li>
-                </ul>
-              </div>
-
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 mt-6">Biblical Basis</h3>
-              <div className="bg-gray-50 dark:bg-dark-200 rounded-xl p-6">
-                <ul className="space-y-2 text-gray-700 dark:text-gray-300 list-disc list-inside">
-                  <li>Exodus 12:2 - &quot;This month shall be your beginning of months&quot;</li>
-                  <li>Deuteronomy 16:1 - &quot;Observe the month of Aviv&quot;</li>
-                  <li>Leviticus 23:27 - &quot;On the tenth day of this seventh month&quot;</li>
-                </ul>
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 text-center">Moon Phases</h3>
-              <div className="bg-gray-50 dark:bg-dark-200 rounded-xl p-6">
-                <div className="flex justify-around items-center mb-4">
-                  <div className="text-center">
-                    <div className="w-12 h-12 rounded-full bg-gray-800 dark:bg-gray-900 mx-auto mb-2"></div>
-                    <p className="text-xs text-gray-600 dark:text-gray-400">New Moon</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-r from-gray-800 to-gray-200 dark:from-gray-900 dark:to-gray-300 mx-auto mb-2"></div>
-                    <p className="text-xs text-gray-600 dark:text-gray-400">Waxing</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-300 mx-auto mb-2"></div>
-                    <p className="text-xs text-gray-600 dark:text-gray-400">Full Moon</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-l from-gray-800 to-gray-200 dark:from-gray-900 dark:to-gray-300 mx-auto mb-2"></div>
-                    <p className="text-xs text-gray-600 dark:text-gray-400">Waning</p>
-                  </div>
-                </div>
-                <p className="text-center text-gray-700 dark:text-gray-300 text-sm mt-4">
-                  The Karaites rejected the Rabbinic traditions and mathematical calendar calculations, returning to what they believed was the biblical method of calendar determination through direct observation.
+    <>
+      <nav className="ppx-breadcrumb" aria-label="Breadcrumb">
+        <Link href="/quiz">{"Study"}</Link>
+        <Icon name="chevron-right" />
+        <span aria-current="page">{"1844 & the Sanctuary"}</span>
+      </nav>
+      <section className="ppx-page-intro">
+        <div className="ppx-kicker">{"Prophecy & the sanctuary"}</div>
+        <h1>
+          {"October 22, 1844."}
+          <br />
+          {"The sanctuary explained."}
+        </h1>
+        <p>
+          {
+            "A Bible study of the 2,300 days, the Day of Atonement, and Christ’s work in the most holy place, following The Great Controversy, chapters 18–28, with the gospel emphasis of Steps to Christ."
+          }
+        </p>
+      </section>
+      <section className="ppx-section">
+        <div className="ppx-calendar-list">
+          <details open>
+            <summary>{"01 · Begin with Daniel 8 and 9"}</summary>
+            <div className="ppx-calendar-document">
+              <h3>{"The prophecy and its explanation"}</h3>
+              {"\n  "}
+              <div className="ppx-quote">
+                <p>
+                  {
+                    "“Unto two thousand and three hundred days; then shall the sanctuary be cleansed.”"
+                  }
                 </p>
+                <cite>{"Daniel 8:14 · KJV"}</cite>
               </div>
+              {"\n  "}
+              <p>
+                {
+                  "Daniel 8 gives the prophetic period. In Daniel 9, Gabriel returns to explain the vision and introduces the seventy weeks appointed to Daniel’s people and Jerusalem. The Great Controversy explains these seventy weeks as “cut off” from the 2,300 days: they form the first part of that longer period, with both periods beginning together."
+                }
+              </p>
+              {"\n  "}
+              <p>
+                {
+                  "In this symbolic prophecy, a day represents a year. Numbers 14:34 and Ezekiel 4:6 provide the day-for-a-year principle used in this explanation: "
+                }
+                <strong>{"2,300 prophetic days represent 2,300 years."}</strong>
+              </p>
+              {"\n  "}
+              <p className="ppx-calendar-source">
+                {"Read the KJV: "}
+                <a
+                  href="https://www.biblegateway.com/passage/?search=Daniel+8&version=KJV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"Daniel 8:14–27"}
+                </a>
+                {"; "}
+                <a
+                  href="https://www.biblegateway.com/passage/?search=Daniel+9&version=KJV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"Daniel 9:21–27"}
+                </a>
+                {"; "}
+                <a
+                  href="https://www.biblegateway.com/passage/?search=Numbers+14&version=KJV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"Numbers 14:34"}
+                </a>
+                {"; "}
+                <a
+                  href="https://www.biblegateway.com/passage/?search=Ezekiel+4&version=KJV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"Ezekiel 4:6"}
+                </a>
+                {"."}
+                <br />
+                {"EGW: "}
+                <a
+                  href="https://www.ellenwhite.info/books/ellen-g-white-book-great-controversy-gc-18.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"The Great Controversy, 324.3; 325.1–326.2"}
+                </a>
+                {"."}
+              </p>
             </div>
-          </div>
-        </section>
-
-        {/* The Millerite Calculation */}
-        <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white text-center mb-8">
-            The Millerite Calculation
-          </h2>
-
-          <div className="bg-gray-50 dark:bg-dark-200 border-l-4 border-gold p-6 rounded-r-xl mb-8">
-            <p className="text-center text-gray-900 dark:text-white font-semibold">
-              Daniel 8:14 - &quot;Unto two thousand and three hundred days; then shall the sanctuary be cleansed.&quot;
-            </p>
-          </div>
-
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-            The Three Decrees - Why 457 BCE?
-          </h3>
-          <p className="text-gray-700 dark:text-gray-300 mb-4">
-            There were three decrees issued concerning Jerusalem:
-          </p>
-
-          <div className="space-y-4 mb-8">
-            <div className="bg-gold/10 border-l-4 border-gold p-4 rounded-r-xl">
-              <p className="font-semibold text-gray-900 dark:text-white">1. 538 BCE - Cyrus&apos;s Decree (Ezra 1:1-4)</p>
-              <p className="text-gray-700 dark:text-gray-300">Permitted Jews to return and rebuild the temple, but not the city walls</p>
+          </details>
+          <details>
+            <summary>{"02 · Why the autumn of 457 B.C.?"}</summary>
+            <div className="ppx-calendar-document">
+              <h3>{"The commandment to restore Jerusalem"}</h3>
+              {"\n  "}
+              <p>
+                {
+                  "Daniel 9:25 begins the period with the commandment to restore and build Jerusalem. Ezra 6:14 names "
+                }
+                <strong>{"Cyrus, Darius, and Artaxerxes"}</strong>
+                {
+                  ". The Great Controversy explains that their successive actions brought the decree to completion, with its fullest form issued by Artaxerxes in 457 B.C."
+                }
+              </p>
+              {"\n  "}
+              <p>
+                {
+                  "Ezra 7:12–26 records this decree, including provision for worship and authority to appoint magistrates and judges. "
+                }
+                <strong>
+                  {"The decree took effect in the autumn of 457 B.C."}
+                </strong>
+                {" That is the starting point used in the prophetic reckoning."}
+              </p>
+              {"\n  "}
+              <p className="ppx-calendar-source">
+                {"Read the KJV: "}
+                <a
+                  href="https://www.biblegateway.com/passage/?search=Daniel+9&version=KJV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"Daniel 9:25"}
+                </a>
+                {"; "}
+                <a
+                  href="https://www.biblegateway.com/passage/?search=Ezra+6&version=KJV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"Ezra 6:14"}
+                </a>
+                {"; "}
+                <a
+                  href="https://www.biblegateway.com/passage/?search=Ezra+7&version=KJV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"Ezra 7:12–26"}
+                </a>
+                {"."}
+                <br />
+                {"EGW: "}
+                <a
+                  href="https://www.ellenwhite.info/books/ellen-g-white-book-great-controversy-gc-18.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"The Great Controversy, 326.3–327.1"}
+                </a>
+                {"."}
+              </p>
+              {"\n"}
+              <p className="ppx-calendar-source">
+                {"For the autumn starting season, see "}
+                <a
+                  href="https://www.ellenwhite.info/books/ellen-g-white-book-great-controversy-gc-22.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"The Great Controversy, 398.4"}
+                </a>
+                {"."}
+              </p>
             </div>
-            <div className="bg-gold/10 border-l-4 border-gold p-4 rounded-r-xl">
-              <p className="font-semibold text-gray-900 dark:text-white">2. 457 BCE - Artaxerxes&apos;s Decree (Ezra 7:11-26)</p>
-              <p className="text-gray-700 dark:text-gray-300">Gave full authority to restore and rebuild Jerusalem with civil governance, legal system, and complete autonomy</p>
+          </details>
+          <details>
+            <summary>{"03 · The seventy weeks point to Christ"}</summary>
+            <div className="ppx-calendar-document">
+              <h3>{"His baptism, sacrifice, and the gospel invitation"}</h3>
+              {"\n  "}
+              <p>
+                {
+                  "Seventy weeks represent 490 years; the first sixty-nine weeks represent 483 years. The fulfillment centers on Jesus Christ. The chronology below follows the explanation in The Great Controversy."
+                }
+              </p>
+              {"\n  "}
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">{"Prophetic milestone"}</th>
+                    <th scope="col">{"Fulfillment"}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {"\n    "}
+                  <tr>
+                    <td data-label="Prophetic milestone">
+                      {"Autumn A.D. 27 · End of 69 weeks"}
+                    </td>
+                    <td data-label="Fulfillment">
+                      {
+                        "Jesus is baptized and anointed by the Holy Spirit, 483 years after autumn 457 B.C."
+                      }
+                    </td>
+                  </tr>
+                  {"\n    "}
+                  <tr>
+                    <td data-label="Prophetic milestone">
+                      {"Spring A.D. 31 · Middle of the final week"}
+                    </td>
+                    <td data-label="Fulfillment">
+                      {
+                        "Jesus is crucified, three and a half years after His baptism. His sacrifice fulfills the offerings that pointed forward to Him."
+                      }
+                    </td>
+                  </tr>
+                  {"\n    "}
+                  <tr>
+                    <td data-label="Prophetic milestone">
+                      {"A.D. 34 · End of 70 weeks"}
+                    </td>
+                    <td data-label="Fulfillment">
+                      {
+                        "The 490 years end. Stephen’s martyrdom and the ensuing persecution mark the widening proclamation of the gospel beyond the Jewish nation."
+                      }
+                    </td>
+                  </tr>
+                  {"\n  "}
+                </tbody>
+              </table>
+              {"\n  "}
+              <p className="ppx-calendar-source">
+                {"Read the KJV: "}
+                <a
+                  href="https://www.biblegateway.com/passage/?search=Daniel+9&version=KJV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"Daniel 9:24–27"}
+                </a>
+                {
+                  "; Luke 3:21–22; Acts 10:38; Mark 1:14–15; Matthew 27:50–51; Acts 7:54–8:5."
+                }
+                <br />
+                {"EGW: "}
+                <a
+                  href="https://www.ellenwhite.info/books/ellen-g-white-book-great-controversy-gc-23.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"The Great Controversy, 410.1"}
+                </a>
+                {"; "}
+                <a
+                  href="https://www.ellenwhite.info/books/ellen-g-white-book-great-controversy-gc-19.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"345.1–347.2"}
+                </a>
+                {"."}
+              </p>
             </div>
-            <div className="bg-gold/10 border-l-4 border-gold p-4 rounded-r-xl">
-              <p className="font-semibold text-gray-900 dark:text-white">3. 444 BCE - Artaxerxes&apos;s Second Decree (Nehemiah 2:1-8)</p>
-              <p className="text-gray-700 dark:text-gray-300">Specifically authorized rebuilding the city walls</p>
+          </details>
+          <details>
+            <summary>{"04 · From the seventy weeks to 1844"}</summary>
+            <div className="ppx-calendar-document">
+              <h3>{"One connected prophetic period"}</h3>
+              {"\n  "}
+              <p>
+                {
+                  "The 490 years are part of the 2,300 years. When the seventy weeks end in A.D. 34, "
+                }
+                <strong>{"1,810 years remain"}</strong>
+                {". Adding those remaining years reaches A.D. 1844."}
+              </p>
+              {"\n  "}
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">{"Step"}</th>
+                    <th scope="col">{"Reckoning"}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {"\n    "}
+                  <tr>
+                    <td data-label="Step">{"The full period"}</td>
+                    <td data-label="Reckoning">{"2,300 years"}</td>
+                  </tr>
+                  {"\n    "}
+                  <tr>
+                    <td data-label="Step">{"The seventy weeks"}</td>
+                    <td data-label="Reckoning">{"70 × 7 = 490 years"}</td>
+                  </tr>
+                  {"\n    "}
+                  <tr>
+                    <td data-label="Step">{"The remainder"}</td>
+                    <td data-label="Reckoning">
+                      {"2,300 − 490 = 1,810 years"}
+                    </td>
+                  </tr>
+                  {"\n    "}
+                  <tr>
+                    <td data-label="Step">{"The ending year"}</td>
+                    <td data-label="Reckoning">
+                      {"A.D. 34 + 1,810 years = A.D. 1844"}
+                    </td>
+                  </tr>
+                  {"\n  "}
+                </tbody>
+              </table>
+              {"\n  "}
+              <p>
+                {"The starting season matters: reckoning from "}
+                <strong>{"autumn 457 B.C."}</strong>
+                {" brings the period to "}
+                <strong>{"autumn 1844"}</strong>
+                {
+                  ". The calendar passes directly from 1 B.C. to A.D. 1, with no year zero."
+                }
+              </p>
+              {"\n  "}
+              <p className="ppx-calendar-source">
+                {"EGW: "}
+                <a
+                  href="https://www.ellenwhite.info/books/ellen-g-white-book-great-controversy-gc-23.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"The Great Controversy, 410.1–410.2"}
+                </a>
+                {"; "}
+                <a
+                  href="https://www.ellenwhite.info/books/ellen-g-white-book-great-controversy-gc-22.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"398.4"}
+                </a>
+                {"."}
+              </p>
             </div>
-          </div>
-
-          <div className="bg-gray-50 dark:bg-dark-200 rounded-xl p-6 mb-8">
-            <p className="text-gray-700 dark:text-gray-300">
-              <span className="font-semibold text-gray-900 dark:text-white">Why the Millerites chose 457 BCE:</span> Daniel 9:25 speaks of &quot;the decree to restore and rebuild Jerusalem&quot; - not just the temple. Only Artaxerxes&apos;s 457 BCE decree gave comprehensive authority to fully restore Jerusalem as a functioning city with civil government, making it the most complete fulfillment of Daniel&apos;s prophecy.
-            </p>
-          </div>
-
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Calculation Steps:</h3>
-          <div className="bg-gray-50 dark:bg-dark-200 rounded-xl p-6 mb-8">
-            <ol className="space-y-2 text-gray-700 dark:text-gray-300 list-decimal list-inside">
-              <li>Applied day-year principle: 2,300 prophetic days = 2,300 literal years</li>
-              <li>Starting point: 457 BCE (Artaxerxes&apos;s comprehensive decree - Ezra 7)</li>
-              <li>457 BCE + 2,300 years = 1844 CE (accounting for no year zero)</li>
-              <li>Identified &quot;cleansing of sanctuary&quot; with Day of Atonement (Yom Kippur)</li>
-              <li>Used Karaite calendar to determine Yom Kippur = October 22, 1844</li>
-            </ol>
-          </div>
-
-          {/* Timeline */}
-          <div className="bg-gray-50 dark:bg-dark-200 rounded-xl p-8 text-center">
-            <div className="flex items-center justify-center gap-4">
-              <div className="text-center">
-                <div className="w-4 h-4 rounded-full bg-gold mx-auto mb-2"></div>
-                <p className="font-bold text-gray-900 dark:text-white">457 BCE</p>
+          </details>
+          <details>
+            <summary>{"05 · Why October 22?"}</summary>
+            <div className="ppx-calendar-document">
+              <h3>{"The tenth day of the seventh month"}</h3>
+              {"\n  "}
+              <p>
+                {
+                  "The sanctuary service supplies the connection between the prophetic period and the appointed day. Leviticus places the annual Day of Atonement on "
+                }
+                <strong>{"the tenth day of the seventh month"}</strong>
+                {". The Great Controversy identifies that day in 1844 as "}
+                <strong>{"October 22"}</strong>
+                {"."}
+              </p>
+              {"\n  "}
+              <p>
+                {
+                  "Chapter 22 explains how the Passover sacrifice and the wave sheaf pointed to Christ’s death and resurrection. The Day of Atonement likewise directs attention to the appointed time and work of cleansing the sanctuary."
+                }
+              </p>
+              {"\n  "}
+              <table>
+                <thead>
+                  <tr>
+                    <th scope="col">{"Biblical observance"}</th>
+                    <th scope="col">{"Appointed time"}</th>
+                    <th scope="col">{"KJV reference"}</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {"\n    "}
+                  <tr>
+                    <td data-label="Biblical observance">{"Passover"}</td>
+                    <td data-label="Appointed time">
+                      {"Fourteenth day of the first month, at even."}
+                    </td>
+                    <td data-label="KJV reference">{"Leviticus 23:5"}</td>
+                  </tr>
+                  {"\n    "}
+                  <tr>
+                    <td data-label="Biblical observance">
+                      {"Feast of weeks / Pentecost"}
+                    </td>
+                    <td data-label="Appointed time">
+                      {"Fifty days counted from the wave-sheaf offering."}
+                    </td>
+                    <td data-label="KJV reference">{"Leviticus 23:15–16"}</td>
+                  </tr>
+                  {"\n    "}
+                  <tr>
+                    <td data-label="Biblical observance">
+                      {"Day of Atonement"}
+                    </td>
+                    <td data-label="Appointed time">
+                      {"Tenth day of the seventh month."}
+                    </td>
+                    <td data-label="KJV reference">
+                      {"Leviticus 16:29–34; 23:27"}
+                    </td>
+                  </tr>
+                  {"\n  "}
+                </tbody>
+              </table>
+              {"\n  "}
+              <p>
+                <strong>
+                  {
+                    "The Bible gives the sanctuary observance and its day; The Great Controversy, 399.4, supplies the stated correspondence to October 22, 1844."
+                  }
+                </strong>
+                {
+                  " These chapters do not provide a month-by-month reconstruction of the Karaite calendar."
+                }
+              </p>
+              {"\n  "}
+              <p className="ppx-calendar-source">
+                {"Read the KJV: "}
+                <a
+                  href="https://www.biblegateway.com/passage/?search=Leviticus+23&version=KJV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"Leviticus 23:5, 15–16, 27, 32"}
+                </a>
+                {"; "}
+                <a
+                  href="https://www.biblegateway.com/passage/?search=Leviticus+16&version=KJV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"Leviticus 16:29–34"}
+                </a>
+                {"."}
+                <br />
+                {"EGW: "}
+                <a
+                  href="https://www.ellenwhite.info/books/ellen-g-white-book-great-controversy-gc-22.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"The Great Controversy, 399.1–399.4"}
+                </a>
+                {"."}
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>{"06 · What sanctuary was to be cleansed?"}</summary>
+            <div className="ppx-calendar-document">
+              <h3>{"Christ’s ministry in heaven"}</h3>
+              {"\n  "}
+              <p>
+                {
+                  "Hebrews describes both the earthly sanctuary and the heavenly sanctuary where Jesus ministers for us. The earthly tabernacle was patterned after the heavenly. Its priests served daily, and the high priest performed the annual cleansing service in the most holy place."
+                }
+              </p>
+              {"\n  "}
+              <p>
+                <strong>
+                  {
+                    "At the close of the 2,300 years in 1844, Christ entered the most holy place of the heavenly sanctuary to begin the closing work of atonement."
+                  }
+                </strong>
+                {
+                  " This was a change in His heavenly ministration. His priestly ministry had already begun after His ascension."
+                }
+              </p>
+              {"\n  "}
+              <p>
+                {
+                  "The cleansing concerns the removal of sin and the examination of the heavenly records. It includes the "
+                }
+                <strong>{"investigative judgment"}</strong>
+                {
+                  ", which precedes Christ’s return. His once-for-all sacrifice is the basis of this ministry; He is not sacrificed again."
+                }
+              </p>
+              {"\n  "}
+              <p className="ppx-calendar-source">
+                {"Read the KJV: "}
+                <a
+                  href="https://www.biblegateway.com/passage/?search=Hebrews+8&version=KJV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"Hebrews 8:1–5"}
+                </a>
+                {"; "}
+                <a
+                  href="https://www.biblegateway.com/passage/?search=Hebrews+9&version=KJV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"Hebrews 9:6–7, 22–28"}
+                </a>
+                {"; "}
+                <a
+                  href="https://www.biblegateway.com/passage/?search=Daniel+7&version=KJV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"Daniel 7:9–10, 13–14"}
+                </a>
+                {"."}
+                <br />
+                {"EGW: "}
+                <a
+                  href="https://www.ellenwhite.info/books/ellen-g-white-book-great-controversy-gc-23.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"The Great Controversy, 417.1–422.1"}
+                </a>
+                {"; "}
+                <a
+                  href="https://www.ellenwhite.info/books/ellen-g-white-book-great-controversy-gc-19.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"352.2"}
+                </a>
+                {"."}
+              </p>
+              {"\n"}
+              <p>
+                {
+                  "Christ is our Advocate in this judgment. He presents His merits on behalf of those who repent and trust in Him. The judgment begins with the dead and proceeds to the living; the time when the living are considered has not been revealed to us."
+                }
+              </p>
+              <p className="ppx-calendar-source">
+                {"EGW: "}
+                <a
+                  href="https://www.ellenwhite.info/books/ellen-g-white-book-great-controversy-gc-28.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"The Great Controversy, 482.4–484.2; 490.1"}
+                </a>
+                {"."}
+              </p>
+            </div>
+          </details>
+          <details>
+            <summary>{"07 · Understanding the disappointment"}</summary>
+            <div className="ppx-calendar-document">
+              <h3>{"The time and the event"}</h3>
+              {"\n  "}
+              <p>
+                {
+                  "The believers expected Jesus to return to earth in 1844. Their disappointment arose from identifying the cleansing of the sanctuary with the purification of the earth by fire. Further study of the sanctuary made the event clear."
+                }
+              </p>
+              {"\n  "}
+              <div className="ppx-quote">
+                <p>
+                  {
+                    "“The mistake had not been in the reckoning of the prophetic periods, but in the event”"
+                  }
+                </p>
+                <cite>
+                  {"Ellen G. White · The Great Controversy, 424.1 · excerpt"}
+                </cite>
               </div>
-              <div className="flex-1 h-1 bg-gold max-w-xs"></div>
-              <div className="text-center">
-                <div className="w-4 h-4 rounded-full bg-gold mx-auto mb-2"></div>
-                <p className="font-bold text-gray-900 dark:text-white">1844 CE</p>
-              </div>
+              {"\n  "}
+              <p>
+                {
+                  "Daniel 7:13 describes the Son of man coming to the Ancient of days. Chapter 24 connects this with Christ’s entrance into the most holy place, His coming to His temple in Malachi 3, and the Bridegroom’s coming to the marriage in Matthew 25."
+                }
+              </p>
+              {"\n  "}
+              <p>
+                <strong>
+                  {
+                    "Christ’s work in the most holy place began in 1844. His visible second coming remains future."
+                  }
+                </strong>
+                {
+                  " Chapter 19 compares this disappointment with the disciples’ misunderstanding before the cross: the prophetic word was fulfilled while the expected event was misunderstood."
+                }
+              </p>
+              {"\n  "}
+              <p className="ppx-calendar-source">
+                {"Read the KJV: "}
+                <a
+                  href="https://www.biblegateway.com/passage/?search=Daniel+7&version=KJV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"Daniel 7:13–14"}
+                </a>
+                {"; Malachi 3:1–3; Matthew 25:1–13."}
+                <br />
+                {"EGW: "}
+                <a
+                  href="https://www.ellenwhite.info/books/ellen-g-white-book-great-controversy-gc-24.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"The Great Controversy, 423.1–426.1"}
+                </a>
+                {"; "}
+                <a
+                  href="https://www.ellenwhite.info/books/ellen-g-white-book-great-controversy-gc-19.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"351.1–352.3"}
+                </a>
+                {"."}
+              </p>
             </div>
-            <p className="text-gray-600 dark:text-gray-400 italic mt-4">2,300 Years</p>
-          </div>
-
-          <p className="text-center text-gray-600 dark:text-gray-400 mt-6 text-sm">
-            This calculation was refined by Samuel Snow and became the basis for what later became known as &quot;The Great Disappointment&quot; when Christ did not return as predicted.
-          </p>
-        </section>
-
-        {/* The 70 Weeks Prophecy */}
-        <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white text-center mb-8">
-            The 70 Weeks Prophecy & Jesus&apos;s Baptism
-          </h2>
-
-          <div className="bg-gray-50 dark:bg-dark-200 border-l-4 border-gold p-6 rounded-r-xl mb-8">
-            <p className="text-center text-gray-900 dark:text-white font-semibold">
-              Daniel 9:24-27 - &quot;Seventy weeks are determined upon thy people...unto the Messiah the Prince&quot;
-            </p>
-          </div>
-
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Calculating Jesus&apos;s Baptism Year</h3>
-          <div className="bg-gray-50 dark:bg-dark-200 rounded-xl p-6 mb-6">
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
-              The Millerites used the same 457 BCE starting point for the 70 weeks prophecy:
-            </p>
-            <ul className="space-y-2 text-gray-700 dark:text-gray-300 list-disc list-inside">
-              <li><span className="font-semibold">70 weeks</span> using day-year principle = 70 x 7 days = <span className="font-semibold">490 years</span></li>
-              <li>Daniel 9:25: &quot;unto the Messiah the Prince&quot; = 69 weeks (7 + 62 weeks)</li>
-              <li>69 weeks = 69 x 7 = <span className="font-semibold">483 years</span></li>
-              <li>457 BCE + 483 years = <span className="font-semibold text-gold">27 CE</span> (Jesus&apos;s baptism)</li>
-            </ul>
-          </div>
-
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Biblical Confirmation</h3>
-          <div className="bg-gray-50 dark:bg-dark-200 rounded-xl p-6 mb-6">
-            <ul className="space-y-2 text-gray-700 dark:text-gray-300 list-disc list-inside">
-              <li>Luke 3:1 - John the Baptist began ministry in the 15th year of Tiberius Caesar (approximately 27-29 CE)</li>
-              <li>Luke 3:21-23 - Jesus was baptized at the start of His ministry, about 30 years old</li>
-            </ul>
-          </div>
-
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Jesus&apos;s Crucifixion - 31 CE</h3>
-          <div className="bg-gray-50 dark:bg-dark-200 rounded-xl p-6 mb-6">
-            <p className="text-gray-900 dark:text-white font-semibold mb-4">
-              Daniel 9:27 - &quot;And he shall confirm the covenant with many for one week: and <span className="text-gold">in the midst of the week</span> he shall cause the sacrifice and the oblation to cease&quot;
-            </p>
-
-            <p className="text-gray-700 dark:text-gray-300 font-semibold mt-4 mb-2">The Calculation:</p>
-            <ul className="space-y-2 text-gray-700 dark:text-gray-300 list-disc list-inside mb-4">
-              <li>The final &quot;week&quot; = 7 years (the 70th week)</li>
-              <li>&quot;In the midst of the week&quot; = middle of 7 years = <span className="font-semibold">3.5 years</span></li>
-              <li>70th week began: 27 CE (Jesus&apos;s baptism)</li>
-              <li>27 CE + 3.5 years = <span className="font-semibold text-gold">31 CE</span> (Jesus&apos;s crucifixion)</li>
-            </ul>
-
-            <p className="text-gray-700 dark:text-gray-300 font-semibold mt-4 mb-2">Why &quot;midst of the week&quot; = Jesus&apos;s death:</p>
-            <ul className="space-y-2 text-gray-700 dark:text-gray-300 list-disc list-inside">
-              <li><span className="font-semibold">&quot;Cause the sacrifice and oblation to cease&quot;</span> - Jesus became the final sacrifice, ending the need for animal sacrifices</li>
-              <li>The temple veil was torn from top to bottom (Matthew 27:51), symbolizing the end of the old covenant sacrificial system</li>
-              <li>Jesus&apos;s death occurred in the middle of the final 7-year period</li>
-            </ul>
-          </div>
-
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">The Complete 70th Week (27-34 CE)</h3>
-          <div className="bg-gray-50 dark:bg-dark-200 rounded-xl p-6 mb-6">
-            <ul className="space-y-2 text-gray-700 dark:text-gray-300 list-disc list-inside mb-4">
-              <li><span className="font-semibold">27 CE</span> - Jesus baptized, begins ministry (start of 70th week)</li>
-              <li><span className="font-semibold">31 CE</span> - Jesus crucified (midst of the week - 3.5 years later)</li>
-              <li><span className="font-semibold">34 CE</span> - End of 70 weeks (stoning of Stephen, gospel goes to Gentiles)</li>
-            </ul>
-
-            <p className="text-gray-700 dark:text-gray-300 font-semibold mt-4 mb-2">Historical Corroboration:</p>
-            <ul className="space-y-2 text-gray-700 dark:text-gray-300 list-disc list-inside">
-              <li>Pontius Pilate&apos;s governorship (26-36 CE)</li>
-              <li>The reign of Tiberius Caesar</li>
-              <li>Astronomical calculations of Passover dates (Jesus died during Passover)</li>
-            </ul>
-          </div>
-
-          {/* 70 Weeks Timeline */}
-          <div className="bg-gray-50 dark:bg-dark-200 rounded-xl p-8 text-center mb-6">
-            <div className="flex items-center justify-center gap-2 md:gap-4 flex-wrap">
-              <div className="text-center">
-                <div className="w-4 h-4 rounded-full bg-gold mx-auto mb-2"></div>
-                <p className="font-bold text-gray-900 dark:text-white text-sm">457 BCE</p>
-                <p className="text-xs text-gray-600 dark:text-gray-400">Decree</p>
-              </div>
-              <div className="flex-1 h-1 bg-green-500 max-w-[100px] md:max-w-[150px]"></div>
-              <div className="text-center">
-                <div className="w-4 h-4 rounded-full bg-yellow-500 mx-auto mb-2"></div>
-                <p className="font-bold text-gray-900 dark:text-white text-sm">27 CE</p>
-                <p className="text-xs text-gray-600 dark:text-gray-400">Baptism</p>
-              </div>
-              <div className="flex-1 h-1 bg-green-500 max-w-[60px] md:max-w-[100px]"></div>
-              <div className="text-center">
-                <div className="w-4 h-4 rounded-full bg-green-500 mx-auto mb-2"></div>
-                <p className="font-bold text-gray-900 dark:text-white text-sm">34 CE</p>
-                <p className="text-xs text-gray-600 dark:text-gray-400">End 70 Weeks</p>
-              </div>
+          </details>
+          <details>
+            <summary>
+              {"08 · The time of the end and the angels’ messages"}
+            </summary>
+            <div className="ppx-calendar-document">
+              <h3>{"The wider prophetic setting"}</h3>
+              {"\n  "}
+              <p>
+                {
+                  "The 1,260-year period provides the setting for the renewed study of prophecy. The Great Controversy identifies it as "
+                }
+                <strong>{"A.D. 538–1798"}</strong>
+                {
+                  ", with the pope’s captivity by the French army marking its close. Since 1798, Daniel’s prophecies concerning the last days have been opened to increasing understanding."
+                }
+              </p>
+              {"\n  "}
+              <p>
+                {
+                  "This period establishes the setting; the 2,300 years and the sanctuary service supply the explanation of 1844. The first angel of Revelation 14 announces the judgment within the everlasting gospel. The second angel warns of Babylon’s fall. Chapter 21 explains that this warning began to be proclaimed in 1844, with its full fulfillment still ahead."
+                }
+              </p>
+              {"\n  "}
+              <p className="ppx-calendar-source">
+                {"Read the KJV: Daniel 7:25; 12:4; Revelation 13:5, 10; "}
+                <a
+                  href="https://www.biblegateway.com/passage/?search=Revelation+14&version=KJV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"Revelation 14:6–8"}
+                </a>
+                {"."}
+                <br />
+                {"EGW: "}
+                <a
+                  href="https://www.ellenwhite.info/books/ellen-g-white-book-great-controversy-gc-20.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"The Great Controversy, 355.1–356.2"}
+                </a>
+                {"; "}
+                <a
+                  href="https://www.ellenwhite.info/books/ellen-g-white-book-great-controversy-gc-21.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"389.2–390.2"}
+                </a>
+                {"; "}
+                <a
+                  href="https://www.ellenwhite.info/books/ellen-g-white-book-great-controversy-gc-25.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"439.2"}
+                </a>
+                {"."}
+              </p>
             </div>
-            <div className="flex justify-center gap-8 mt-4 text-sm text-gray-600 dark:text-gray-400 italic">
-              <span>483 years (69 weeks)</span>
-              <span>7 years (1 week)</span>
+          </details>
+          <details>
+            <summary>{"09 · The sanctuary reveals our present duty"}</summary>
+            <div className="ppx-calendar-document">
+              <h3>{"Faith in Jesus, obedience, and preparation"}</h3>
+              {"\n  "}
+              <p>
+                {
+                  "Revelation 11:19 shows the ark of God’s testament in His heavenly temple. Chapter 25 connects this with the ministry in the most holy place and the enduring authority of God’s law, including the seventh-day Sabbath."
+                }
+              </p>
+              {"\n  "}
+              <p>
+                {
+                  "The three angels’ messages call us to worship our Creator, keep His commandments, and hold the faith of Jesus. While Christ ministers for us, we are called to repentance, the putting away of sin, and a life transformed by His grace. Chapter 26 presents Sabbath reform as part of this work."
+                }
+              </p>
+              {"\n  "}
+              <p>
+                <strong>
+                  {"This study gives no new date for Christ’s return."}
+                </strong>
+                {
+                  " The Great Controversy maintains the autumn 1844 conclusion of the 2,300 days and warns against setting further dates for the second advent. Our calling is to follow Christ by faith and share His message."
+                }
+              </p>
+              {"\n  "}
+              <p className="ppx-calendar-source">
+                {"Read the KJV: "}
+                <a
+                  href="https://www.biblegateway.com/passage/?search=Revelation+11&version=KJV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"Revelation 11:19"}
+                </a>
+                {"; "}
+                <a
+                  href="https://www.biblegateway.com/passage/?search=Revelation+14&version=KJV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"Revelation 14:6–12"}
+                </a>
+                {"; Exodus 20:8–11; "}
+                <a
+                  href="https://www.biblegateway.com/passage/?search=Isaiah+58&version=KJV"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"Isaiah 58:12–14"}
+                </a>
+                {"."}
+                <br />
+                {"EGW: "}
+                <a
+                  href="https://www.ellenwhite.info/books/ellen-g-white-book-great-controversy-gc-24.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"The Great Controversy, 425.1"}
+                </a>
+                {"; "}
+                <a
+                  href="https://www.ellenwhite.info/books/ellen-g-white-book-great-controversy-gc-25.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"433.1–435.2"}
+                </a>
+                {"; "}
+                <a
+                  href="https://www.ellenwhite.info/books/ellen-g-white-book-great-controversy-gc-26.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"451.1–452.2; 456.1–457.1"}
+                </a>
+                {"."}
+              </p>
+              {"\n"}
+              <p>
+                {
+                  "We do not earn acceptance with God by our works. We receive Christ by faith, and His righteousness stands in place of our failure. As we abide in Him, His Spirit renews the heart and brings forth obedience. Preparation for His return is a daily life of dependence on our Saviour."
+                }
+              </p>
+              <p className="ppx-calendar-source">
+                {"EGW: "}
+                <a
+                  href="https://www.ellenwhite.info/books/bk-sc-07.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"Steps to Christ, 59–63"}
+                </a>
+                {"; "}
+                <a
+                  href="https://www.ellenwhite.info/books/bk-sc-08.htm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {"68–72"}
+                </a>
+                {"."}
+              </p>
             </div>
-          </div>
-
-          <div className="bg-gold/10 border-l-4 border-gold p-6 rounded-r-xl">
-            <p className="text-center text-gray-700 dark:text-gray-300">
-              <span className="font-semibold">Key Insight:</span> The Millerites saw the fulfillment of the 70 weeks prophecy (ending in 34 CE with the stoning of Stephen and the gospel going to the Gentiles) as validation that their 457 BCE starting point was correct, which they then applied to the 2,300-day prophecy ending in 1844.
-            </p>
-          </div>
-        </section>
-
-        {/* The 1260-Year Prophecy */}
-        <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white text-center mb-8">
-            The 1260-Year Prophecy: 538-1798 CE
-          </h2>
-
-          <div className="bg-gray-50 dark:bg-dark-200 border-l-4 border-gold p-6 rounded-r-xl mb-8">
-            <p className="text-center text-gray-900 dark:text-white font-semibold mb-4">Biblical References</p>
-            <ul className="text-gray-700 dark:text-gray-300 list-disc list-inside space-y-1 mb-4">
-              <li><span className="font-semibold">1,260 days</span> - Revelation 11:3, 12:6</li>
-              <li><span className="font-semibold">42 months</span> - Revelation 11:2, 13:5 (42 x 30 = 1,260 days)</li>
-              <li><span className="font-semibold">Time, times, and half a time</span> - Daniel 7:25, 12:7, Revelation 12:14 (3.5 years = 1,260 days)</li>
-            </ul>
-            <p className="text-center text-gray-700 dark:text-gray-300">
-              Using the day-year principle: <span className="font-semibold">1,260 prophetic days = 1,260 literal years</span>
-            </p>
-          </div>
-
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">The Timeline: 538-1798 CE</h3>
-
-          <div className="grid md:grid-cols-2 gap-6 mb-8">
-            <div className="bg-gold/10 border-l-4 border-gold p-6 rounded-r-xl">
-              <p className="font-semibold text-gray-900 dark:text-white mb-4">Starting Point - 538 CE</p>
-              <ul className="space-y-2 text-gray-700 dark:text-gray-300 list-disc list-inside text-sm">
-                <li>Emperor Justinian&apos;s decree (533 CE) recognizing the Pope&apos;s supremacy was fully enforced</li>
-                <li>The papacy gained civil and temporal (political) power</li>
-                <li>Marked the beginning of papal dominance in Europe</li>
-                <li>Start of the prophesied period of persecution</li>
-              </ul>
-            </div>
-            <div className="bg-gold/10 border-l-4 border-gold p-6 rounded-r-xl">
-              <p className="font-semibold text-gray-900 dark:text-white mb-4">Ending Point - 1798 CE</p>
-              <ul className="space-y-2 text-gray-700 dark:text-gray-300 list-disc list-inside text-sm">
-                <li>538 + 1,260 years = 1798</li>
-                <li>February 1798: French General Berthier entered Rome under Napoleon&apos;s orders</li>
-                <li>Pope Pius VI was taken captive</li>
-                <li>Papal temporal (political) power effectively ended</li>
-                <li>The Pope died in exile in 1799</li>
-                <li>Seen as the &quot;deadly wound&quot; of Revelation 13:3</li>
-              </ul>
-            </div>
-          </div>
-
-          {/* 1260 Timeline */}
-          <div className="bg-gray-50 dark:bg-dark-200 rounded-xl p-8 text-center mb-8">
-            <div className="flex items-center justify-center gap-4">
-              <div className="text-center">
-                <div className="w-4 h-4 rounded-full bg-purple-500 mx-auto mb-2"></div>
-                <p className="font-bold text-gray-900 dark:text-white text-sm">538 CE</p>
-                <p className="text-xs text-gray-600 dark:text-gray-400">Papal Power<br />Established</p>
-              </div>
-              <div className="flex-1 h-1 bg-purple-500 max-w-xs"></div>
-              <div className="text-center">
-                <div className="w-4 h-4 rounded-full bg-purple-500 mx-auto mb-2"></div>
-                <p className="font-bold text-gray-900 dark:text-white text-sm">1798 CE</p>
-                <p className="text-xs text-gray-600 dark:text-gray-400">Pope Captured<br />Power Ended</p>
-              </div>
-            </div>
-            <p className="text-gray-600 dark:text-gray-400 italic mt-4">1,260 Years</p>
-          </div>
-
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Why This Prophecy Validated the Millerite Calculations</h3>
-          <div className="bg-gray-50 dark:bg-dark-200 rounded-xl p-6 mb-6">
-            <p className="text-gray-700 dark:text-gray-300 mb-4">
-              The fulfillment of the 1260-year prophecy in 1798 was crucial evidence for the Millerites:
-            </p>
-            <ol className="space-y-2 text-gray-700 dark:text-gray-300 list-decimal list-inside">
-              <li><span className="font-semibold">Confirmed the day-year principle</span> - If 1,260 days meant 1,260 years and was fulfilled, then 2,300 days could also mean 2,300 years</li>
-              <li><span className="font-semibold">Demonstrated prophetic timelines could be calculated accurately</span> - The 1798 event was recent, verifiable history</li>
-              <li><span className="font-semibold">Indicated they were living in the &quot;time of the end&quot;</span> - Daniel 12:4 speaks of the time of the end, and 1798 marked a prophetic milestone</li>
-              <li><span className="font-semibold">Created urgency for the 1844 prediction</span> - With one major prophecy recently fulfilled, another (the 2,300 days) was imminent</li>
-              <li><span className="font-semibold">Provided a pattern of interpretation</span> - Multiple prophecies using the same principle reinforced their methodology</li>
-            </ol>
-          </div>
-
-          <div className="bg-gold/10 border-l-4 border-gold p-6 rounded-r-xl">
-            <p className="text-center text-gray-700 dark:text-gray-300">
-              <span className="font-semibold">Connection to 1844:</span> The Millerites viewed the 1798 event as opening the &quot;time of the end&quot; period, during which the 2,300-day prophecy would reach its conclusion in 1844. These weren&apos;t isolated calculations but interconnected prophetic timelines that they believed confirmed each other.
-            </p>
-          </div>
-        </section>
-
-        {/* Historical Significance */}
-        <section className="mb-16">
-          <h2 className="text-2xl md:text-3xl font-semibold text-gray-900 dark:text-white text-center mb-8">
-            Historical Significance
-          </h2>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">Millerite Movement</h3>
-              <div className="bg-gray-50 dark:bg-dark-200 rounded-xl p-6">
-                <ul className="space-y-2 text-gray-700 dark:text-gray-300 list-disc list-inside">
-                  <li>Led by William Miller</li>
-                  <li>Initially predicted Christ&apos;s return between March 1843-1844</li>
-                  <li>After the &quot;first disappointment,&quot; recalculated to October 22, 1844</li>
-                  <li>Thousands of followers prepared for Christ&apos;s return</li>
-                </ul>
-              </div>
-
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 mt-6">Aftermath & Legacy</h3>
-              <div className="bg-gray-50 dark:bg-dark-200 rounded-xl p-6">
-                <ul className="space-y-2 text-gray-700 dark:text-gray-300 list-disc list-inside">
-                  <li>Became known as &quot;The Great Disappointment&quot;</li>
-                  <li>Led to formation of Seventh-day Adventist Church</li>
-                  <li>Prompted new interpretations of biblical prophecy</li>
-                  <li>Significant event in American religious history</li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="flex items-center justify-center">
-              <div className="bg-gray-100 dark:bg-dark-200 rounded-xl p-8 text-center">
-                <div className="w-24 h-24 rounded-full bg-gray-300 dark:bg-gray-600 mx-auto mb-4 flex items-center justify-center">
-                  <svg className="w-12 h-12 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                  </svg>
-                </div>
-                <p className="text-xl font-bold text-gray-900 dark:text-white">William Miller</p>
-                <p className="text-gray-600 dark:text-gray-400 text-sm">1782-1849</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Footer */}
-        <div className="text-center pt-8 border-t border-gray-200 dark:border-gray-800">
-          <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-            Karaite Jewish Calendar vs. Gregorian Calendar - 1844
-          </h3>
+          </details>
         </div>
-      </div>
-    </div>
-  )
+        <p className="ppx-preview-note">
+          {
+            "Scripture quotations use the King James Version. Explanations follow Ellen G. White’s The Great Controversy (1911); references identify the printed page and paragraph. Open each source to study the passage in context."
+          }
+        </p>
+        <div className="ppx-actions">
+          <Link
+            className="ppx-action ppx-action-primary"
+            href="/watch?category=2300%20Day%20Prophecy"
+          >
+            {"Watch the prophecy studies "}
+            <Icon name="arrow-up-right" />
+          </Link>
+        </div>
+      </section>
+    </>
+  );
 }

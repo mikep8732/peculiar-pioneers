@@ -1,0 +1,86 @@
+{
+  "earthquake": {
+    "label": "Earthquakes",
+    "icon": "activity",
+    "color": "#B45309",
+    "ink": "#FFFFFF",
+    "textColor": "#B45309"
+  },
+  "storm": {
+    "label": "Storms & Hurricanes",
+    "icon": "cloud-lightning",
+    "color": "#0369A1",
+    "ink": "#FFFFFF",
+    "textColor": "#0369A1"
+  },
+  "flood": {
+    "label": "Floods",
+    "icon": "waves",
+    "color": "#1D4ED8",
+    "ink": "#FFFFFF",
+    "textColor": "#1D4ED8"
+  },
+  "fire": {
+    "label": "Fires",
+    "icon": "flame",
+    "color": "#DC2626",
+    "ink": "#FFFFFF",
+    "textColor": "#DC2626"
+  },
+  "volcano": {
+    "label": "Volcanic",
+    "icon": "mountain",
+    "color": "#7C2D12",
+    "ink": "#FFFFFF",
+    "textColor": "#7C2D12"
+  },
+  "disease": {
+    "label": "Disease & Pandemic",
+    "icon": "stethoscope",
+    "color": "#047857",
+    "ink": "#FFFFFF",
+    "textColor": "#047857"
+  },
+  "famine": {
+    "label": "Famine",
+    "icon": "wheat",
+    "color": "#854D0E",
+    "ink": "#FFFFFF",
+    "textColor": "#854D0E"
+  },
+  "war": {
+    "label": "War & Conflict",
+    "icon": "swords",
+    "color": "#4C1D95",
+    "ink": "#FFFFFF",
+    "textColor": "#4C1D95"
+  },
+  "crime": {
+    "label": "Crime & Violence",
+    "icon": "triangle-alert",
+    "color": "#BE185D",
+    "ink": "#FFFFFF",
+    "textColor": "#BE185D"
+  },
+  "disaster": {
+    "label": "Other Disasters",
+    "icon": "circle-alert",
+    "color": "#374151",
+    "ink": "#FFFFFF",
+    "textColor": "#374151"
+  },
+  "economic": {
+    "label": "Economic Crisis",
+    "icon": "chart-no-axes-combined",
+    "color": "#475569",
+    "ink": "#FFFFFF",
+    "textColor": "#475569"
+  },
+  "prophecy": {
+    "label": "Prophetic Events",
+    "icon": "book-open",
+    "color": "#C9A227",
+    "ink": "#222433",
+    "textColor": "#806414"
+  }
+}
